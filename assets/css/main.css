@@ -1585,9 +1585,9 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #9a9a9a;
+		color: #5a5a5a;
 		font-family: "Raleway", Arial, Helvetica, sans-serif;
-		font-size: 13pt;
+		font-size: 15pt;
 		font-weight: 300;
 		line-height: 1.65;
 	}
@@ -1595,7 +1595,7 @@
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -1603,7 +1603,7 @@
 		@media screen and (max-width: 1280px) {
 
 			body, input, select, textarea {
-				font-size: 11pt;
+				font-size: 14pt;
 			}
 
 		}
@@ -1611,7 +1611,7 @@
 		@media screen and (max-width: 980px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -1619,7 +1619,7 @@
 		@media screen and (max-width: 736px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -1627,7 +1627,7 @@
 		@media screen and (max-width: 480px) {
 
 			body, input, select, textarea {
-				font-size: 12pt;
+				font-size: 15pt;
 			}
 
 		}
@@ -1784,11 +1784,11 @@
 		}
 
 	section.wrapper, article.wrapper {
-		padding: 6em 0;
+		padding: 5em 0;
 	}
 
 		section.wrapper header, article.wrapper header {
-			margin-bottom: 4em;
+			margin-bottom: 2em;
 		}
 
 			section.wrapper header h2, article.wrapper header h2 {
@@ -1925,7 +1925,11 @@
 			}
 
 		.flex.flex-4 .box {
-			width: 21%;
+			width: 19%;
+		}
+
+		.flex.flex-5 .box {
+			width: 20%;
 		}
 
 		@media screen and (max-width: 980px) {
@@ -1967,11 +1971,19 @@
 				width: 47%;
 			}
 
+			.flex.flex-5 .box {
+				width: 58.75%;
+			}
+
 		}
 
 		@media screen and (max-width: 480px) {
 
 			.flex.flex-4 .box {
+				width: 100%;
+			}
+
+			.flex.flex-5 .box {
 				width: 100%;
 			}
 
@@ -2093,7 +2105,7 @@
 		input[type="checkbox"] + label,
 		input[type="radio"] + label {
 			text-decoration: none;
-			color: #9a9a9a;
+			color: #5a5a5a;
 			cursor: pointer;
 			display: inline-block;
 			font-size: 1em;
@@ -2179,9 +2191,7 @@
 /* Box */
 
 	.box {
-		border: solid 1px #dbdbdb;
-		margin-bottom: 2em;
-		padding: 1.5em;
+		margin-bottom: 0em;
 	}
 
 		.box > :last-child,
@@ -2197,8 +2207,7 @@
 		}
 
 		.box.person {
-			border: solid 1px rgba(255, 255, 255, 0.25);
-			padding: 3em 1.5em;
+			padding: 0.25em 1.25em;
 		}
 
 			.box.person h3 {
@@ -2731,7 +2740,7 @@
 		line-height: 3.25em;
 		position: absolute;
 		text-align: right;
-		top: 4em;
+		top: 2.0em;
 		width: 100%;
 		z-index: 10001;
 	}
@@ -2806,7 +2815,7 @@
 	@media screen and (max-width: 980px) {
 
 		#header {
-			top: 3em;
+			top: 2em;
 			height: 44px;
 			line-height: 44px;
 		}
@@ -2816,7 +2825,7 @@
 	@media screen and (max-width: 736px) {
 
 		#header {
-			top: 2em;
+			top: 1,5em;
 		}
 
 	}
@@ -2824,7 +2833,7 @@
 	@media screen and (max-width: 480px) {
 
 		#header {
-			top: 1em;
+			top: 1.5em;
 			min-width: 320px;
 		}
 
@@ -2933,7 +2942,7 @@
 /* Banner */
 
 	#banner {
-		padding: 12em 0 10em 0;
+		padding: 8em 0 5em 0;
 		background-image: url('../../images/banner.jpg');
 		background-size: cover;
 		background-position: top;
@@ -2954,7 +2963,7 @@
 
 		#banner p {
 			font-size: 1em;
-			color: rgba(255, 255, 255, 0.55);
+			color: rgba(255, 255, 255, 0.8);
 			margin-bottom: 1.75em;
 		}
 
@@ -2969,7 +2978,7 @@
 		@media screen and (max-width: 1280px) {
 
 			#banner {
-				padding: 10em 2em 8em 2em;
+				padding: 8em 2em 2em 2em;
 			}
 
 		}
@@ -2985,7 +2994,7 @@
 		@media screen and (max-width: 736px) {
 
 			#banner {
-				padding: 8em 1.5em 6em 1.5em;
+				padding: 7em 1.5em 2em 1.5em;
 			}
 
 				#banner h1 {
@@ -3065,3 +3074,9 @@
 		}
 
 	}
+
+
+.header-logo {
+	width:80px;
+	height:auto;
+}
