@@ -3080,3 +3080,10 @@
 	width:80px;
 	height:auto;
 }
+
+.box-link {
+	color: rgb(186, 206, 230);
+	text-decoration: none;
+	border-color: white;
+	border-width: 1px;
+}
