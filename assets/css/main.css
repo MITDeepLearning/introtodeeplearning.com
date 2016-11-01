@@ -2716,6 +2716,14 @@
 				width: 100%;
 			}
 
+			.button {
+				font-size: 18px;
+			}
+
+			.button.icon {
+				padding-left: 0.0em;
+		}
+
 		}
 
 /* Header */
