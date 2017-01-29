@@ -3095,3 +3095,7 @@
 	border-color: white;
 	border-width: 1px;
 }
+
+.small-wrapper{
+	padding-top: 0px !important;
+}
