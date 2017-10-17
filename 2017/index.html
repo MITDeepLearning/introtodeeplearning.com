@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>MIT 6.S191: Introduction to Deep Learning</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel='shortcut icon' href='favicon.ico?' type='image/x-icon'/>
+
+		<link rel="image_src" href="http://introtodeeplearning.com/images/banner-sc-4.png" />
+		<meta property="og:image" content="http://introtodeeplearning.com/images/banner-sc-4.png" />
+
+		<meta property="og:locale" content="en_US">
+		<meta property="og:title" content="6.S191 Introduction to Deep Learning">
+		<meta property="og:description" content="A 1-week extensive survey of deep learning methods and applications.">
+		<meta property="og:url" content="http://introtodeeplearning.com">
+		<meta property="og:site_name" content="6.S191 Introduction to Deep Learning">
+
+
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38335397-6', 'auto');
+  ga('send', 'pageview');
+
+</script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="index.html" class="logo"><img class="header-logo" src="images/mit.png" alt="MIT" /></a>
+					<nav id="nav">
+						<a href="index.html">Home</a>
+						<a href="schedule.html">Schedule</a>
+						<a href="https://piazza.com/class/iwmlwep2fnd5uu">Piazza</a>
+						<a href="https://github.com/yala/introdeeplearning">Labs</a>
+						<a href="https://docs.google.com/document/d/1g5Q1ycQOSJ6L4oWxfpbCNEmcqACQdXMZLMFORmZFgog/edit?usp=sharing">Paper Review</a> 
+						<a href="http://deepqueue.herokuapp.com/">HelpQ</a>
+						<a href="https://docs.google.com/document/d/1UkOT7w67my5RoQdNEqDzV2OHZgsKzHdiVp7oKOYBIcM/edit?usp=sharing">Additional Resources</a>
+					</nav>
+					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+				</div>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				<h1>6.S191: Introduction to Deep Learning</h1>
+				<p>A 1-week extensive survey of deep learning methods and applications.</p>
+				<a href="schedule.html" class="button special icon fa-check-square">Go to Lecture Slides + Videos!</a>
+			</section>
+
+		<!-- One -->
+			<section id="one" class="wrapper">
+				<div class="inner">
+					<div class="flex flex-2">
+						<article>
+							<header>
+								<h3>Course Description</h3>
+							</header>
+							<p> 
+								A week-long intro to deep learning methods with applications to machine translation, image recognition, game playing, image generation and more. A collaborative course incorporating labs in TensorFlow and peer brainstorming along with lectures. Course concludes with project proposals with feedback from staff and panel of industry sponsors.
+								<br>
+								<br>
+								<b>Recommended Pre-Req:</b> one of 6.036, 6.034, 6.008, 6.867, 6.864, 6.804, 15.075, IDS.301, 6.047, 6.041, 6.438  or equivalent experience
+							</p>
+						</article>
+						<article>
+							<header>
+								<h3>Time and Location</h3>
+							</header>
+							<p>Jan 30 - Feb 3<br>
+							10:30am-1:30pm, Room 34-100 <br> <br>
+							10:30a-11:15pm: Lecture Part 1<br>
+							11:15a-12:00pm: Lecture Part 2<br>
+							12:00pm-12:30pm: Coffee Break<br>
+							12:30pm-1:30pm: Lab (Hands-On TensorFlow Tutorials)
+							</p>
+						</article>
+						<article>
+							<header>
+								<h3>Grading Policy</h3>
+							</header>
+							<p>P/F based on completion of project proposal assignment</p>
+						</article>
+						<article>
+							<header>
+								<h3>Project Proposals</h3>
+							</header>
+							<p>Project proposals will be 1-minute pitches of a novel deep learning algorithm, application, open-source contribution, plan to create an interesting dataset, or other contributions. Sponsors will judge and select top projects as award winners. Alternative to project proposal is to submit a 1-page review of an interesting deep learning paper.</p>
+						</article>
+						<article>
+							<header>
+								<h3>Questions?</h3>
+							</header>
+							<p>Reach out to introtodeeplearning-staff@mit.edu</p>
+						</article>
+						<article>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style1 special">
+				<div class="inner">
+					<header>
+						<h2>6.S191 Team</h2>
+						<p></p>
+					</header>
+					<div class="flex flex-4">
+						<div class="box person">
+							<div class="image round">
+								<img src="images/nick.jpg" alt="Nick" />
+							</div>
+							<h3>Nick Locascio</h3>
+							<p>Lead Organizer</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/harini-2.jpg" alt="Harini" />
+							</div>
+							<h3>Harini Suresh</h3>
+							<p>Lead Organizer</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/ishaan.jpg" alt="Ishaan" />
+							</div>
+							<h3>Ishaan Gulrajani</h3>
+							<p>Co-Chair</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/victoria-2.jpg" alt="Victoria" />
+							</div>
+							<h3>Victoria Dean</h3>
+							<p>Co-Chair</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/lex.jpg" alt="Lex"/>
+							</div>
+							<h3>Lex Fridman</h3>
+							<p>Co-Chair</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/yo.jpg" alt="Yo" />
+							</div>
+							<h3>Yo Shavit</h3>
+							<p>Co-Chair</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/ruth.jpg" alt="Ruth" />
+							</div>
+							<h3>Rue Park</h3>
+							<p>Marketing</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/anish.jpg" alt="Anish"/>
+							</div>
+							<h3>Anish Athalye</h3>
+							<p>TA</p>
+						</div>
+						<div class="box person">
+							<div class="image round">
+								<img src="images/eddie.jpg" alt="Eduardo"/>
+							</div>
+							<h3>Eduardo DeLeon</h3>
+							<p>TA</p>
+						</div>
+
+						<div class="box person">
+							<div class="image round">
+								<img src="images/wengong.jpeg" alt="Wengong"/>
+							</div>
+							<h3>Wengong Jin</h3>
+							<p>TA</p>
+						</div>
+
+						<div class="box person">
+							<div class="image round">
+								<img src="images/yala.jpg" alt="Yala"/>
+							</div>
+							<h3>Adam Yala</h3>
+							<p>TA</p>
+						</div>
+						
+
+						<div class="box person">
+							<div class="image round">
+								<img src="images/harry.jpg" alt="Harry"/>
+							</div>
+							<h3>Harry Bleyan</h3>
+							<p>TA</p>
+						</div>
+						
+						<div class="box person">
+							<div class="image round">
+								<img src="images/tianxiao.jpg" alt="Tianxiao"/>
+							</div>
+							<h3>Tianxiao Shen</h3>
+							<p>TA</p>
+						</div>
+						
+						<div class="box person">
+							<div class="image round">
+								<img src="images/helen.jpg" alt="Helen"/>
+							</div>
+							<h3>Helen Zhou</h3>
+							<p>TA</p>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+
+		<!-- Three -->
+<!-- 			<section id="three" class="wrapper special">
+				<div class="inner">
+					<header class="align-center">
+						<h2>Extra Materials</h2>
+						<p>Beyond the course</p>
+					</header>
+					<div class="flex flex-2">
+						<article>
+							<div class="image fit">
+								<img src="images/pic01.jpg" alt="Pic 01" />
+							</div>
+							<header>
+								<h3>Tutorials</h3>
+							</header>
+							<p>Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor lorem ipsum.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+						<article>
+							<div class="image fit">
+								<img src="images/pic02.jpg" alt="Pic 02" />
+							</div>
+							<header>
+								<h3>Interesting Papers</h3>
+							</header>
+							<p>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna non comodo sodales tempus.</p>
+							<footer>
+								<a href="#" class="button special">More</a>
+							</footer>
+						</article>
+					</div>
+				</div>
+			</section> -->
+
+
+		<!-- Four -->
+			<section id="four" class="wrapper special">
+				<div class="inner" style="max-width: 50%;">
+					<header>
+						<h2>Sponsors</h2>
+						<p></p>
+					</header>
+					<div class="flex flex-3">
+						<div class="box person">
+							<div class="image">
+								<img src="images/google.png" alt="Google Brain" />
+							</div>
+<!-- 							<h3>Google Brain</h3> -->
+						</div>
+						<br>
+						<br>
+						<div class="box person">
+							<div class="image">
+								<img src="images/amazon-alexa-logo.png" alt="amazon alexa"/>
+							</div>
+<!-- 							<h3>amazon alexa</h3> -->
+						</div>
+						<br>
+						<br>
+						<div class="box person">
+							<div class="image">
+								<img src="images/nvidia-logo.png" alt="NVIDIA"/>
+							</div>
+<!-- 							<h3>NVIDIA</h3> -->
+						</div>
+						<br>
+						<br>
+						<div class="box person">
+							<div class="image">
+								<img src="images/ibm-watson.png" alt="IBM Watson"/>
+							</div>
+<!-- 							<h3>IBM Watson</h3> -->
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="flex">
+						<div class="copyright">
+							&copy;
+							Banner Image: <a href="https://github.com/lengstrom/fast-style-transfer/">Fast Style Transfer by lengstrom</a>
+							Layout: <a href="https://templated.co">TEMPLATED</a>.
+						</div>
+<!-- 						<ul class="icons">
+							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
+						</ul> -->
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
