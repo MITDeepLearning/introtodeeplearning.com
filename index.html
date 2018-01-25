@@ -4,6 +4,12 @@
 		<title>MIT 6.S191: Introduction to Deep Learning</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
 		<link rel="stylesheet" href="assets/css/main.css?v4.0" />
 		<link rel='shortcut icon' href='favicon.ico?' type='image/x-icon'/>
 
@@ -15,6 +21,8 @@
 		<meta property="og:description" content="An introductory course on deep learning methods and applications.">
 		<meta property="og:url" content="http://introtodeeplearning.com">
 		<meta property="og:site_name" content="6.S191 Introduction to Deep Learning">
+		
+		
 
 	</head>
 	<body>
@@ -212,14 +220,14 @@
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/google.png" ALIGN="left" /> 
 										Guest Lecture: Google 
 										<!--[<a href="slides/6s191-L7-Google.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b>Slides</b>] [<b>Video</b>]
+										[<b><a data-toggle="modal" data-target="#google_modal">Info</a></b>] [<b>Slides</b>] [<b>Video</b>]
 										<br><font size="-1"><i>coming soon!</i></font>
 									</td>
 									<td>
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/nvidia.png" ALIGN="left" /> 
 										Guest Lecture: NVIDIA 
 										<!--[<a href="slides/6s191-L8-NVIDIA.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b>Slides</b>] [<b>Video</b>]
+										[<b><a data-toggle="modal" data-target="#nvidia_modal">Info</a></b>] [<b>Slides</b>] [<b>Video</b>]
 										<br><font size="-1"><i>coming soon!</i></font>
 									</td>
 									<td>
@@ -234,13 +242,13 @@
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/ibm.png" ALIGN="left" /> 
 										Guest Lecture: IBM 
 										<!--[<a href="slides/6s191-L9-IBM.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b>Slides</b>] [<b>Video</b>]
+										[<b><a data-toggle="modal" data-target="#ibm_modal">Info</a></b>] [<b>Slides</b>] [<b>Video</b>]
 										<br><font size="-1"><i>coming soon!</i></font>
 									</td>
 									<td>
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/tencent.png" ALIGN="left" /> 
 										Guest Lecture: Tencent
-										[<b>Slides</b>] [<b>Video</b>]
+										[<b><a data-toggle="modal" data-target="#tencent_modal">Info</a></b>] [<b>Slides</b>] [<b>Video</b>]
 										<!--[<a href="slides/6s191-L9-Tencent.pdf">Slides</a>] [<a href="#">Video</a>] -->
 										<br><font size="-1"><i>coming soon!</i></font>
 									</td>
@@ -370,14 +378,11 @@
 					</header>
 				</div>
 
-			</section>
-
-			<section id="guest-lectures" class="wrapper style2 special">
-				<div class="inner">
+				<br><br>
+				<div id="guest-lectures" class="inner">
 					<!-- Break -->
 					<header>
 						<h2>Guest Lectures</h2>
-						<p></p>
 					</header>
 
 					<div class="row">
@@ -392,30 +397,155 @@
 						  <h4 align="left">Adversarial Learning for Generative Models and Inference</h4>
 						  <h5 align="left">Aaron Courville, Associate Proffessor - University of Montreal </h5>
 
-							<p align="left" style="font-size:15px" >Aaron Courville is an Assistant Professor in the Department of Computer Science and Operations Research (DIRO) at the University of Montreal, and member of MILA (Montreal Institute for Learning Algorithms). Courville is a co-author of the textbook, <a href="https://mitpress.mit.edu/books/deep-learning">Deep Learning</a>, along with Ian Goodfellow and Yoshua Bengio. </p>
+							<p align="left" style="font-size:15px" >Aaron Courville is an Assistant Professor in the Department of Computer Science and Operations Research (DIRO) at the University of Montreal, and member of MILA (Montreal Institute for Learning Algorithms). Courville is a co-author of the textbook, <a href="https://mitpress.mit.edu/books/deep-learning"><font color="white">Deep Learning</font></a>, along with Ian Goodfellow and Yoshua Bengio. </p>
 					  </div>
 					</div>
-					<div class="row">
 
-					  <div class="3u 12u$(medium)">
-						<div class="box person">
-								<div class="image round">
-									<img src="images/urs.jpeg" alt="Urs" />
+					<!-- Modal -->
+					<div class="modal fade" id="nvidia_modal" role="dialog">
+						<div class="modal-dialog">
+
+						<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<a class="button icon close" data-dismiss="modal">&times;</a>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h3 class="modal-title">End to End Learning for Self Driving Cars</h3>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="4u 12u$(medium)">
+											<div class="box person">
+												<div class="image round">
+													<img src="images/urs.jpeg" alt="Urs" />
+												</div>
+											</div>
+										</div>
+										<div class="8u 12u$(medium)">
+										  <h5 align="left">Urs Muller, Chief Architect of Autonomous Driving - NVIDIA </h5>
+										</div>
+										<div class="12u 12u$(medium)">
+											<p align="left" style="font-size:15px;">Urs Muller joined NVIDIA early 2015 to build and lead an autonomous driving team that creates novel deep-learning solutions for self-driving cars on NVIDIA's high-performance DRIVE PX platform. Previously, Muller worked at Bell Labs and later founded Net-Scale Technologies, Inc., a prime contractor on several robotics and machine learning DARPA programs.</p>
+										</div>
+									</div>
 								</div>
 							</div>
-					  </div>
-						<div class="9u 12u$(medium)">
-						  <h4 align="left">End to End Learning for Self Driving Cars</h4>
-						  <h5 align="left">Urs Muller, Chief Architect of Autonomous Driving - NVIDIA </h5>
+						</div>
+					</div>
+					
+					<!-- Modal -->
+					<div class="modal fade" id="google_modal" role="dialog">
+						<div class="modal-dialog">
 
-							<p align="left" style="font-size:15px;">Urs Muller joined NVIDIA early 2015 to build and lead an autonomous driving team that creates novel deep-learning solutions for self-driving cars on NVIDIA's high-performance DRIVE PX platform. Previously, Muller worked at Bell Labs and later founded Net-Scale Technologies, Inc., a prime contractor on several robotics and machine learning DARPA programs.</p>
-					  </div>
+						<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<a class="button icon close" data-dismiss="modal">&times;</a>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h3 class="modal-title"></h3>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="4u 12u$(medium)">
+											<div class="box person">
+												<div class="image round">
+													<img src="images/dsculley.jpg" alt="Sculley" />
+												</div>
+											</div>
+										</div>
+										<div class="8u 12u$(medium)">
+										  <h3 align="left">Issues with Image Classification </h3>
+										  <h5 align="left">D. Sculley, Technical Lead &amp; Manager - Google Brain</h5>
+										</div>
+										<div class="12u 12u$(medium)">
+											<p align="left" style="font-size:15px;">D. Sculley leads teams in Google Brain focused on TensorFlow Usability, ML Fairness, Bayesian Optimization, and general deep learning research.  His located in Google's Cambridge, MA office, which has a wide array of ML opportunities and projects.</p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="4u 12u$(medium)">
+											<div class="box person">
+												<div class="image round">
+													<img src="images/scai.png" alt="Cai" />
+												</div>
+											</div>
+										</div>
+										<div class="8u 12u$(medium)">
+										  <h3 align="left">Faster TensorFlow Development with TF Debugger and Eager Mode</h3>
+										  <h5 align="left">Shanqing Cai, Senior Software Engineer - Google Brain</h5>
+										</div>
+										<div class="12u 12u$(medium)">
+											<p align="left" style="font-size:15px;">Shanqing Cai has been working for the past two years to help make model development in TensorFlow as easy and transparent as possible.  He has led the development of the TensorFlow Debugger, among many contributions in this space.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Modal -->
+					<div class="modal fade" id="ibm_modal" role="dialog">
+						<div class="modal-dialog">
 
-
+						<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<a class="button icon close" data-dismiss="modal">&times;</a>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h3 class="modal-title"></h3>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="4u 12u$(medium)">
+											<div class="box person">
+												<div class="image round">
+													<img src="images/lisa.png" alt="Lisa Amini" />
+												</div>
+											</div>
+										</div>
+										<div class="8u 12u$(medium)">
+										  <h5 align="left">Lisa Amini; Director of IBM Research Cambridge &amp; Acting Director MIT-IBM Watson AI Lab - IBM</h5>
+										</div>
+										<div class="12u 12u$(medium)">
+											<p align="left" style="font-size:15px;">Dr. Lisa Amini is the Director of IBM Research Cambridge, and Acting IBM Director of the newly announced <a href="http://mitibmwatsonailab.mit.edu">MIT-IBM Watson AI Lab</a>. The MIT-IBM Watson AI Lab is dedicated to fundamental artificial intelligence (AI) research with the goal of propelling scientific breakthroughs in four research pillars: AI Algorithms, the Physics of AI, the Application of AI to industries, and Advancing shared prosperity through AI; all of which leverage and pioneer machine learning, deep learning, and machine reasoning algorithms. </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 
-			  </div>
+					
+					<!-- Modal -->
+					<div class="modal fade" id="tencent_modal" role="dialog">
+						<div class="modal-dialog">
 
+						<!-- Modal content-->
+							<div class="modal-content">
+								<div class="modal-header">
+									<a class="button icon close" data-dismiss="modal">&times;</a>
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h3 class="modal-title"></h3>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="4u 12u$(medium)">
+											<div class="box person">
+												<div class="image round">
+													<img src="images/linma.jpg" alt="Lin Ma" />
+												</div>
+											</div>
+										</div>
+										<div class="8u 12u$(medium)">
+										  <h5 align="left">Lin Ma; Principal Researcher - Tencent AI Lab</h5>
+										</div>
+										<div class="12u 12u$(medium)">
+											<p align="left" style="font-size:15px;">Lin Ma is a Principal Researcher at Tencent AI Lab based in Shenzhen, China. His current research interests lie in the areas of computer vision and deep learning, such as image/video processing, analysis, and understanding. Previously, he was a Researcher with Huawei Noah's Ark Lab, Hong Kong. Lin Ma received his Ph.D. degree in Department of Electronic Engineering at the Chinese University of Hong Kong (CUHK) in 2013. He received the B. E., and M. E. degrees from Harbin Institute of Technology, Harbin, China, in 2006 and 2008, respectively, both in computer science. He was a finalist to HKIS young scientist award in engineering science in 2012. He was awarded the Microsoft Research Asia fellowship in 2011.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 
 			</section>
 
