@@ -112,7 +112,13 @@
 					<p> - <strong>[Jan 29, 2018]</strong> Labs are officially open! Once you have Docker installed, you can open them directly with a single command:<br><code>docker run -p 8888:8888 -p 6006:6006  mit6s191/iap2018:labs</code></p>
 
 					<p> - <strong>[Jan 20, 2018]</strong> To prepare for the first day of software labs please bring a laptop with <strong>Docker CE</strong> installed <strong>before lecture starts</strong>. To install docker please visit the following link depending on your operating system: <a href="https://www.docker.com/docker-ubuntu">Ubuntu</a>, <a href="https://www.docker.com/docker-mac">Mac</a>, <a href="https://www.docker.com/docker-windows">Windows</a>. Please complete this before the first lecture (Jan 29, 2018) -- if you have any issues please post on Piazza (see below).<br>
-					  To test your installation run <code>docker run -p 8888:8888 -p 6006:6006  mit6s191/iap2018:labs</code> in your terminal command line and open <code>http://localhost:8888</code> in your internet browser. </p>
+
+					<h2 id="labs">Labs: </h2>
+					<p>To download labs, first download our codebase: <a href="https://github.com/aamini/introtodeeplearning_labs">https://github.com/aamini/introtodeeplearning_labs</a><br>
+					Then launch the docker container inside your command terminal: <br>
+						<code>docker run -p 8888:8888 -p 6006:6006 -v "/path/to/introtodeeplearning_labs:/notebooks/introtodeeplearning_labs" mit6s191/iap2018:labs</code>
+						<br>where <code>/path/to/introtodeeplearning_labs</code> is the path to the repository that you downloaded above.
+					</p>
 					<h2>Piazza: </h2>
 					<p><a href="https://piazza.com/class/jcp36n5pwq4wo">https://piazza.com/class/jcp36n5pwq4wo</a><br>
 					Please join and post to Piazza with any course related questions. We prefer this over email so other students can also see and benefit from the answer. </p>
@@ -145,14 +151,14 @@
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L1.png" ALIGN="left" /> 
 										Introduction to Deep Learning 
 										<!--[<a href="slides/6s191-L1-DeepLearning.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b>Slides</b>] [<b>Video</b>]
+										[<a href="./materials/2018_6S191_Lecture1.pdf">Slides</a>] [<b>Video</b>]
 										<br><font size="-1"><i>coming soon!</i></font>
 									</td>
 									<td>
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L2.png" ALIGN="left" /> 
 										Deep Sequence Modeling 
 										<!--[<a href="slides/6s191-L2-SequenceModeling.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b>Slides</b>] [<b>Video</b>]
+										[<a href="./materials/2018_6S191_Lecture2.pdf">Slides</a>] [<b>Video</b>]
 										<br><font size="-1"><i>coming soon!</i></font>
 									</td>
 									<td> 
