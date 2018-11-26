@@ -52,42 +52,77 @@
 				</div>
 			</header>
 
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Dec 3, 2018 00:09:00 GMT-05:00").getTime();
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get todays date and time
+			  var now = new Date().getTime();
+
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+
+				if (distance > 0) {
+
+				  // Time calculations for days, hours, minutes and seconds
+				  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				  // Display the result in the element with id="demo"
+				  document.getElementById("registration").innerHTML = "<h2><b><font color='white'>Registration for 2019 opening in "
+						+ days + "d "
+						+ hours + "h "
+						+ minutes + "m "
+						+ seconds + "s "
+						+"</font></b></h2>";
+
+				} else {
+				// If the count down is finished, write some text
+			    clearInterval(x);
+			    document.getElementById("registration").innerHTML = "<h2><b><font color='white'>Registration for 2019 is now open!</font></b></h2>"
+						+ "<a href='https://student.mit.edu/cgi-bin/sfprwtrm.sh' class='button icon fa-check-square'>MIT Registration</a><br><br>";
+			  }
+			}, 1000);
+		</script>
+
 		<!-- Banner -->
 			<section id="banner">
 				<h1>6.S191: Introduction to Deep Learning</h1>
 				<h4><font color="white">MIT's official introductory course on deep learning methods and applications.</font></h4>
-				<!--
-				<h2><b><font color="white">Registration for 2018 is now open!</font></b></h2>
-				-->
+
+				<div id="registration"></div>
+
 				<a href="http://eepurl.com/df8UOn" class="button special icon fa-check-square">Join the Mailing List!</a>
 		</section>
 
 		<!-- One -->
 			<section id="overview" class="wrapper">
-				<div class="inner" style="max-width: 50%;" >
-					<div style=" position:relative; padding-bottom:56.25%; height:0; overflow:hidden; ">
-						<iframe style="	position:absolute; top:0; left:0; width:100%; height:100%;" src="https://www.youtube.com/embed/videoseries?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-					</div><br>
-				</div>
+
 				<div class="inner" style="max-width: 75%;" >
 					<div class="flex flex-2">
 						<article>
 							<header>
 								<h3>Course Description</h3>
 							</header>
-							<p> An introductory course on deep learning methods with applications to machine translation, image recognition, game playing, image generation and more. A collaborative course incorporating labs in TensorFlow and peer brainstorming along with lectures. Course concludes with project proposals with feedback from staff and panel of industry sponsors. <br>
+							<p> MIT's official introductory course on deep learning methods with applications to machine translation, image recognition, game playing, and more. Students will gain foundational knowledge of deep learning algorithms and get practical experience in building neural networks in TensorFlow. Course concludes with project proposals with feedback from staff and panel of industry sponsors.
+								Prerequisites assume elementary calculus (i.e. taking derivatives and applying the chain rule) and linear algebra (i.e. matrix multiplication), we'll try to explain everything else along the way! Experience in Python is helpful but not necessary. Listeners are welcome! <br>
 						  </p>
 						</article>
 						<article>
 							<header>
 								<h3>Time and Location</h3>
 							</header>
-							<p>Jan 29 - Feb 2<br>
-							10:30am-1:30pm, MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a> <br><br>
-							10:30am-11:15pm: Lecture Part 1<br>
-							11:15am-12:00pm: Lecture Part 2<br>
-							12:00pm-12:30pm: Snack Break<br>
-							12:30pm-1:30pm: Lab (Hands-On TensorFlow Labs)
+							<p>Mon Jan 28 - Fri Feb 1<br>
+							1:00pm-4:00pm, MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a> <br><br>
+							1:00pm-1:45pm: Lecture Part 1<br>
+							1:45am-2:30pm: Lecture Part 2<br>
+							2:30pm-3:00pm: Snack Break<br>
+							3:00pm-4:00pm: Lab (Hands-On TensorFlow Labs)
 							</p>
 						</article>
 
@@ -102,20 +137,21 @@
 							<header>
 								<h3>Registration</h3>
 							</header>
-							<p>If you are an MIT student (undergraduate or graduate) please register by <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">submitting an add-drop form here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 3 units when prompted. You can also specify if you want to be registered as a listener or regular student there. If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/df8UOn">mailing list</a>.</p>
+							<p>Registration opens on Dec 3, at 9am. If you are an MIT student (undergraduate or graduate) please <a href="https://student.mit.edu/cgi-bin/sfprwtrm.sh">register here</a>. You can specify if you want to take the course for credit or as a listener there. If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/df8UOn">mailing list</a>.</p>
+								<!-- <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">submitting an add-drop form here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 3 units when prompted. You can also specify if you want to be registered as a listener or regular student there.  -->
 						</article>
 						<article>
 							<header>
 								<h3>Grading Policy</h3>
 							</header>
-							<p>3 units P/D/F based on completion of project proposal assignment</p>
+							<p>3 units P/D/F based on completion of project proposal assignment. Listeners also welcome!</p>
 						</article>
 						<article>
 							<header>
 								<h3>Questions?</h3>
 							</header>
-							<p>Reach out to introtodeeplearning-staff@mit.edu</p>
-							<p>To view archived versions of this website from past years please <a href="./2017/index.html">click here</a>.</p>
+							<p>Reach out to <a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></p>
+							<p>To view archived versions of this website from past years please click here for <a href="./2018/index.html">2018</a> and <a href="./2017/index.html">2017</a>.</p>
 						</article>
 
 
@@ -124,7 +160,7 @@
 
 
 
-				<div id="schedule" class="inner">
+				<div id="schedule" class="inner" style="max-width: 70%;">
 					<header class="align-center">
 						<h2>Lecture Schedule</h2>
 					</header>
@@ -143,97 +179,110 @@
 								<tr>
 									<td>1</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L1.png" ALIGN="left" />
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L1.gif?v1.0" ALIGN="left" />
 										Introduction to Deep Learning
-										<!--[<a href="slides/6s191-L1-DeepLearning.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b><a href="./materials/2018_6S191_Lecture1.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=JN6H4rQvwgY&index=1&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>]
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
+										<!-- [<a href="slides/6s191-L1-DeepLearning.pdf">Slides</a>] [<a href="#">Video</a>] -->
+										<!-- [<b><a href="./materials/2018_6S191_Lecture1.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=JN6H4rQvwgY&index=1&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>] -->
 									</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L2.png" ALIGN="left" />
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L2.gif?v1.0" ALIGN="left" />
 										Deep Sequence Modeling
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L2-SequenceModeling.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b><a href="./materials/2018_6S191_Lecture2.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=CznICCPa63Q&index=2&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>]
+										<!-- [<b><a href="./materials/2018_6S191_Lecture2.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=CznICCPa63Q&index=2&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>] -->
 									</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/Lab1.png" ALIGN="left" />
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/Lab1.gif?v1.0" ALIGN="left" />
 										Intro to TensorFlow, Music Generation with RNNs
+										<br>[Slides] [Video]   <font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="https://github.com/aamini/introdeeplearning">Code</a>]-->
-										[<b><a href="http://www.github.com/aamini/introtodeeplearning_labs">Code</a></b>]
+										<!-- [<b><a href="http://www.github.com/aamini/introtodeeplearning_labs">Code</a></b>] -->
 									</td>
 								</tr>
 
 								<tr>
 									<td>2</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L3.png" ALIGN="left" />
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L3.gif?v1.0" ALIGN="left" />
 										Deep Computer Vision
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L3-ComputerVision.pdf">Slides</a>] [<a href="#">Video</a>]-->
-										[<b><a href="./materials/2018_6S191_Lecture3.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=NVH8EYPHi30&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=3">Video</a></b>]
+										<!-- [<b><a href="./materials/2018_6S191_Lecture3.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=NVH8EYPHi30&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=3">Video</a></b>] -->
 									</td>
 									<td>
-										<img style="margin-right:1rem;" height="100" src="images/thumb/L4.png" align="left">
+										<img style="margin-right:1rem;" height="100" src="images/thumb/L4.gif?v2.0" align="left">
 										Deep Generative Models
-										[<b><a href="./materials/2018_6S191_Lecture4.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=JVb54xhEw6Y&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4">Video</a></b>]
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
+										<!-- [<b><a href="./materials/2018_6S191_Lecture4.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=JVb54xhEw6Y&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4">Video</a></b>] -->
 									</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/Lab2.png?v2.0" ALIGN="left" />
-										Disease Detection from Human X-Ray Scans
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/Lab2.gif?v1.0" ALIGN="left" />
+										De-biasing Facial Recognition Systems
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="https://github.com/yala/introdeeplearning">Code</a>]-->
-										[<b><a href="http://www.github.com/aamini/introtodeeplearning_labs">Code</a></b>]
+										<!-- [<b><a href="http://www.github.com/aamini/introtodeeplearning_labs">Code</a></b>] -->
 									</td>
 								</tr>
 
 								<tr>
 									<td>3</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L5.png" ALIGN="left" />
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L5.gif?v2.0" ALIGN="left" />
 										Deep Reinforcement Learning
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L5-ReinforcementLearning.pdf">Slides</a>] [<a href="#">Video</a>]  -->
-										[<b><a href="./materials/2018_6S191_Lecture5.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=s5qqjyGiBdc&index=5&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>]
+										<!-- [<b><a href="./materials/2018_6S191_Lecture5.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=s5qqjyGiBdc&index=5&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>] -->
 									</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L6.png" ALIGN="left" />
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/L6.gif?v1.0" ALIGN="left" />
 										Limitations and New Frontiers
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L6-ChallengesAndNextSteps.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b><a href="./materials/2018_6S191_Lecture6.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=l_yWLAQg7LU&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6">Video</a></b>]
+										<!-- [<b><a href="./materials/2018_6S191_Lecture6.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=l_yWLAQg7LU&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6">Video</a></b>] -->
 									</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/work.png" ALIGN="left" />
-										Work time for paper reviews/project proposals
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/Lab3.gif?v2.0" ALIGN="left" />
+										Learning AlphaGo from Scratch
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 									</td>
 								</tr>
 
 								<tr>
 									<td>4</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/google.png" ALIGN="left" />
-										Guest Lecture: Google
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/mystery1.png" ALIGN="left" />
+										Guest Lecture: TBD
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L7-Google.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b><a data-toggle="modal" data-target="#google_modal">Info</a></b>] [<b><a href="https://www.youtube.com/watch?v=QYwESy6isuc&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7">Video1</a></b>] [<b><a href="./materials/2018_6S191_Lecture8.pdf">Slides2</a></b>] [<b><a href="https://www.youtube.com/watch?v=FkHWKq86tSw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8">Video2</a></b>]
+										<!-- [<b><a data-toggle="modal" data-target="#google_modal">Info</a></b>] [<b><a href="https://www.youtube.com/watch?v=QYwESy6isuc&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7">Video1</a></b>] [<b><a href="./materials/2018_6S191_Lecture8.pdf">Slides2</a></b>] [<b><a href="https://www.youtube.com/watch?v=FkHWKq86tSw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8">Video2</a></b>] -->
 									</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/nvidia.png" ALIGN="left" />
-										Guest Lecture: NVIDIA
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/mystery2.png" ALIGN="left" />
+										Guest Lecture: TBD
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L8-NVIDIA.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b><a data-toggle="modal" data-target="#nvidia_modal">Info</a></b>] [<b><a href="./materials/2018_6S191_Lecture9.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=Z7YMDwzUTds&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9">Video</a></b>]
+										<!-- [<b><a data-toggle="modal" data-target="#nvidia_modal">Info</a></b>] [<b><a href="./materials/2018_6S191_Lecture9.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=Z7YMDwzUTds&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9">Video</a></b>] -->
 									</td>
 									<td>
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/work.png" ALIGN="left" />
-										Sponsor Booths + Work time for paper reviews/project proposals
+										Work time for paper reviews/project proposals
 									</td>
 								</tr>
 								<tr>
 									<td>5</td>
 									<td>
-										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/ibm.png" ALIGN="left" />
-										Guest Lecture: IBM
+										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/mystery3.png" ALIGN="left" />
+										Guest Lecture: TBD
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
 										<!--[<a href="slides/6s191-L7-Google.pdf">Slides</a>] [<a href="#">Video</a>] -->
-										[<b><a data-toggle="modal" data-target="#ibm_modal">Info</a></b>] [<b><a href="./materials/2018_6S191_Lecture10.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=mNqVGB2HkXg&index=10&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>]
+										<!-- [<b><a data-toggle="modal" data-target="#ibm_modal">Info</a></b>] [<b><a href="./materials/2018_6S191_Lecture10.pdf">Slides</a></b>] [<b><a href="https://www.youtube.com/watch?v=mNqVGB2HkXg&index=10&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">Video</a></b>] -->
 									</td>
 									<td>
-										<img style="margin-right:1rem;" height="100" src="images/thumb/tencent.png" align="left">
-										Guest Lecture: Tencent
-										[<strong><a data-toggle="modal" data-target="#tencent_modal">Info</a></strong>] [<b><a href="https://www.youtube.com/watch?v=aFEnWHxUd7s&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=11">Video</a></b>]
+										<img style="margin-right:1rem;" height="100" src="images/thumb/mystery4.png" align="left">
+										Guest Lecture: TBD
+										<br>[Slides] [Video] <br><font size="-1"><i>coming soon!</i></font>
+										<!-- [<strong><a data-toggle="modal" data-target="#tencent_modal">Info</a></strong>] [<b><a href="https://www.youtube.com/watch?v=aFEnWHxUd7s&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=11">Video</a></b>] -->
 									</td>
 									<td>
 										<IMG style="margin-right:1rem;"  height="100" SRC="images/thumb/present.png" ALIGN="left" />
@@ -277,13 +326,7 @@
 							<h3>Harini Suresh</h3>
 							<p>Co-Chair</p>
 						</div>
-						<div class="box person">
-							<div class="image round">
-								<img src="images/lex.jpg" alt="Lex" />
-							</div>
-							<h3>Lex Fridman</h3>
-							<p>Co-Chair</p>
-						</div>
+
 
 					</div>
 					<br>
@@ -364,7 +407,7 @@
 				<br><br>
 				<div id="guest-lectures" class="inner">
 					<!-- Break -->
-					<header>
+					<!-- <header>
 						<h2>Guest Lectures</h2>
 					</header>
 
@@ -382,7 +425,7 @@
 
 							<p align="left" style="font-size:15px" >Aaron Courville is an Assistant Professor in the Department of Computer Science and Operations Research (DIRO) at the University of Montreal, and member of MILA (Montreal Institute for Learning Algorithms). Courville is a co-author of the textbook, <a href="https://mitpress.mit.edu/books/deep-learning"><font color="white">Deep Learning</font></a>, along with Ian Goodfellow and Yoshua Bengio. </p>
 					  </div>
-					</div>
+					</div> -->
 				</section>
 
 					<!-- Modal -->
@@ -558,24 +601,32 @@
 					  <div class="4u 12u$(medium)">
 						<div class="box person">
 							<div class="image">
-								<img src="images/tencent.png?v4.0" alt="Tencent" />
+								<img src="images/ibm-research.png?v4.0" alt="IBM" />
 							</div>
 						</div>
 					  </div>
 					</div>
 				</div>
 
-				<div class="inner" style="max-width: 50%;">
+				<div class="inner" style="max-width: 70%;">
 					<div class="row">
-					  <div class="6u 12u$(medium)">
+						<div class="4u 12u$(medium)">
 						<div class="box person">
 							<div class="image">
-								<img src="images/ibm-research.png?v4.0" alt="IBM" />
+								<img src="images/onepanel.png?v1.0" alt="Tencent" />
+							</div>
+						</div>
+						</div>
+
+					  <div class="4u 12u$(medium)">
+						<div class="box person">
+							<div class="image">
+								<img src="images/tencent.png?v4.0" alt="Tencent" />
 							</div>
 						</div>
 					  </div>
 
-					  <div class="6u 12u$(medium)">
+					  <div class="4u 12u$(medium)">
 						<div class="box person">
 							<div class="image">
 								<img src="images/microsoft_logo.png?v4.0" alt="Microsoft" />
