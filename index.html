@@ -117,7 +117,7 @@
 
     <script>
 			// Set the date we're counting down to
-			var countDownDate = new Date("Dec 3, 2019 09:00:00 GMT-05:00").getTime();
+      var countDownDate = new Date("Dec 3, 2019 09:00:00 GMT-05:00").getTime();
 
 			// Update the count down every 1 second
 			var x = setInterval(function() {
@@ -128,6 +128,7 @@
 			  // Find the distance between now and the count down date
 			  var distance = countDownDate - now;
 
+        var registrationCounter = "";
 				if (distance > 0) {
 
 				  // Time calculations for days, hours, minutes and seconds
@@ -137,19 +138,22 @@
 				  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 				  // Display the result in the element with id="demo"
-				  document.getElementById("registration").innerHTML = "<h3>Registration opening in <highlight>"
+				  registrationCounter = "<h3>Registration opening in <highlight>"
 						+ days + "d "
 						+ hours + "h "
 						+ minutes + "m "
 						+ seconds + "s "
-						+"</highlight></h3>";
+						+"</highlight></h3><br>";
 
 				} else {
 				// If the count down is finished, write some text
 			    clearInterval(x);
-			    document.getElementById("registration").innerHTML = "<h2><b><font color='white'>Registration for 2019 is now open!</font></b></h2>"
-						+ "<a href='https://student.mit.edu/cgi-bin/sfprwtrm.sh' class='button icon fa-check-square'>MIT Registration</a><br><br>";
+			    registrationCounter = "<h3>Registration for 2020 is now open!!</h3>"
+						+ '<br><a class="btn-solid-reg page-scroll" href="https://student.mit.edu/cgi-bin/sfprwtrm.sh"><i class="fas fa-graduation-cap"></i><emsp> MIT REGISTRATION</a> &nbsp';
 			  }
+
+        var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/df8UOn"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+        document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
 			}, 1000);
 		</script>
 
@@ -193,7 +197,6 @@
                 <div class="row">
                   <div class="col-lg-12 card-center" style="margin-top:2rem">
                       <div id="registration"></div> <br>
-                      <a class="btn-solid-reg page-scroll" href="http://eepurl.com/df8UOn"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>
                   </div>
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
@@ -218,14 +221,13 @@
             <div class="col-lg-4">
               <div class="text-container">
                 <h2>Time and Location</h2>
+                <h5 style="text-align:center">Mon Jan 27 - Fri Jan 31, 2020</h5>
                 <p style="text-align:center">
-                  <b>Mon Jan 27 - Fri Jan 31, 2020</b><br>
-                  1:00pm-4:00pm, MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a> <br><br>
+                  <b>1:00pm-4:00pm, MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></b> <br><br>
                   1:00pm-1:45pm: Lecture Part 1<br>
                   1:45am-2:30pm: Lecture Part 2<br>
                   2:30pm-2:40pm: Snack Break<br>
                   2:40pm-4:00pm: Software Labs<br><br>
-                  <i>Exact times to be confirmed for 2020.</i>
                 </p>
               </div>
             </div>  <!-- end col-lg-4  -->
