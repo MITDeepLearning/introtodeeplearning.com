@@ -2185,3 +2185,20 @@ a:hover.back-to-top {
 .lighter-background {
   background-color: #2f2c3d;
 }
+
+.custom-modal-header {
+  background-color: #4633af;
+}
+
+.custom-modal-body {
+  background-color: #262431;
+}
+
+.card-modal {
+  background-color: transparent;
+}
+
+.card-lecture a {
+  color: #00c9db;
+  font-weight:bold;
+}

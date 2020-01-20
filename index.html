@@ -47,7 +47,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link href="assets/css/swiper.css" rel="stylesheet">
   	<link href="assets/css/magnific-popup.css" rel="stylesheet">
-  	<link href="assets/css/styles.css" rel="stylesheet">
+  	<link href="assets/css/styles.css?v=1" rel="stylesheet">
 
   	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -117,7 +117,7 @@
 
     <script>
 			// Set the date we're counting down to
-      var countDownDate = new Date("Dec 3, 2019 09:00:00 GMT-05:00").getTime();
+      var registrationDate = new Date("Dec 3, 2019 09:00:00 GMT-05:00").getTime();
 
 			// Update the count down every 1 second
 			var x = setInterval(function() {
@@ -126,16 +126,16 @@
 			  var now = new Date().getTime();
 
 			  // Find the distance between now and the count down date
-			  var distance = countDownDate - now;
+        var registrationDistance = registrationDate - now;
 
         var registrationCounter = "";
-				if (distance > 0) {
+				if (registrationDistance > 0) {
 
 				  // Time calculations for days, hours, minutes and seconds
-				  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-				  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-				  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				  var days = Math.floor(registrationDistance / (1000 * 60 * 60 * 24));
+				  var hours = Math.floor((registrationDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				  var minutes = Math.floor((registrationDistance % (1000 * 60 * 60)) / (1000 * 60));
+				  var seconds = Math.floor((registrationDistance % (1000 * 60)) / 1000);
 
 				  // Display the result in the element with id="demo"
 				  registrationCounter = "<h3>Registration opening in <highlight>"
@@ -152,7 +152,7 @@
 						+ '<br><a class="btn-solid-reg page-scroll" href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm"><i class="fas fa-graduation-cap"></i><emsp> MIT REGISTRATION</a> &nbsp';
 			  }
 
-        var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/df8UOn"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+        var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
         document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
 			}, 1000);
 		</script>
@@ -177,7 +177,9 @@
                           <!-- Video Preview -->
                           <div class="image-container">
                               <div class="video-wrapper">
-                                  <a class="popup-youtube" href="https://www.youtube.com/watch?v=5v1JnYv_yWs&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" data-effect="fadeIn">
+                                  <a class="popup-youtube" href="https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1" data-effect="fadeIn">
+                                  <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=ky7P10_ZuZ8" data-effect="fadeIn"> -->
+
                                       <img class="img-fluid" src="images/video-frame.jpg" alt="alternative">
                                       <span class="video-play-button">
                                           <span></span>
@@ -244,7 +246,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Course Schedule</h2>
-                    <div class="p-heading p-large">(2020 schedule coming soon!)</div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
 
@@ -271,11 +272,10 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 1</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1'>Video</a>] </p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 1 -->
-
               <!-- Lecture 2 -->
               <div class="col-md-4">
                 <div class="row">
@@ -296,7 +296,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 2</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 2 -->
@@ -314,14 +314,14 @@
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Intro to Tensorflow; <br>Music Generation</highlight></h5>
+                      <h5 class="card-title"><highlight>Intro to TensorFlow; <br>Music Generation</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lab Session 1</h6>
-                    <p>[Code] <i>coming soon!</i></p>
+                    <p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p>
                   </div>
                 </div>
               </div> <!-- end of Lab 1 -->
@@ -351,7 +351,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 3</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 3 -->
@@ -376,7 +376,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 4</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 4 -->
@@ -401,7 +401,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lab Session 2</h6>
-                    <p>[Code] <i>coming soon!</i></p>
+                    <p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] [<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] </p>
                   </div>
                 </div>
               </div> <!-- end of Lab 2 -->
@@ -431,7 +431,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 5</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 5 -->
@@ -456,7 +456,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 6</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 6 -->
@@ -481,7 +481,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lab Session 3</h6>
-                    <p>[Code] <i>coming soon!</i></p>
+                    <p> [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] </p>
                   </div>
                 </div>
               </div> <!-- end of Lab 3 -->
@@ -497,21 +497,21 @@
                   <div class="col-md-2 v-center">
                     <div class="card card-lecture">
                       <div class="card-icon">
-                        <img src="images/thumb/mystery1.jpg" alt="">
+                        <img src="images/thumb/L7.gif" alt="">
                       </div>
                     </div>
                   </div>
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
+                      <h5 class="card-title"><highlight>Neurosymbolic Hybrid AI</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 7</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a data-toggle="modal" data-target="#ibm_modal">Info</a>] [Slides] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 7 -->
@@ -522,21 +522,21 @@
                   <div class="col-md-2 v-center">
                     <div class="card card-lecture">
                       <div class="card-icon">
-                        <img src="images/thumb/mystery2.jpg" alt="">
+                        <img src="images/thumb/L8.gif" alt="">
                       </div>
                     </div>
                   </div>
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
+                      <h5 class="card-title"><highlight>Generalizable Autonomy in Robotics</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 8</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 8 -->
@@ -561,7 +561,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lab Session 4</h6>
-                    <p>[Code] <i>coming soon!</i></p>
+                    <p>[Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lab 4 -->
@@ -576,21 +576,21 @@
                   <div class="col-md-2 v-center">
                     <div class="card card-lecture">
                       <div class="card-icon">
-                        <img src="images/thumb/mystery3.jpg" alt="">
+                        <img src="images/thumb/L9.gif" alt="">
                       </div>
                     </div>
                   </div>
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
+                      <h5 class="card-title"><highlight>Neural Rendering</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 9</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 9 -->
@@ -601,21 +601,22 @@
                   <div class="col-md-2 v-center">
                     <div class="card card-lecture">
                       <div class="card-icon">
-                        <img src="images/thumb/present.jpg" alt="">
+                        <img src="images/thumb/L10.gif" alt="">
+                        <!-- <img src="images/thumb/mystery4.jpg" alt=""> -->
                       </div>
                     </div>
                   </div>
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Final Project Presentations</highlight></h5>
+                      <h5 class="card-title"><highlight>ML for Scent</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 10</h6>
-                    <p>[Slides] [Video] <i>coming soon!</i></p>
+                    <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L10.pdf'>Slides</a>] [Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 10 -->
@@ -633,14 +634,14 @@
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Awards Ceremony</highlight></h5>
+                      <h5 class="card-title"><highlight>Final Projects and Awards Ceremony</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lab Session 5</h6>
-                    <p>[Code] <i>coming soon!</i></p>
+                    <p>[Video] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lab 5 -->
@@ -689,7 +690,7 @@
                         <ul>
                           <li>If you are an MIT student, please formally register as a listener on Websis.
                             <a lass="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">Click here</a> for instructions</li>
-                          <li>If you are not an MIT student, you can still attend the course without registering. Everyone can also sign up for our <a href="http://eepurl.com/df8UOn">mailing list</a> if you'd like to receive class related announcements.</li>
+                          <li>If you are not an MIT student, you can still attend the course without registering. Everyone can also sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a> if you'd like to receive class related announcements.</li>
                         </ul>
                       </div>
                     </div>
@@ -738,7 +739,7 @@
                       <div class="card-body">
                         <!-- Registration opens on Dec 3, 2019 at 9am. If you are an MIT student (undergraduate or graduate) please <a href="https://student.mit.edu/cgi-bin/sfprwtrm.sh">register here</a>. You can specify if you want to take the course for credit or as a listener there.  -->
                         If you are an MIT student (undergraduate or graduate) please <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">register here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 3 units when prompted. You can also specify if you want to be registered as a listener or regular student there.
-                        If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/df8UOn">mailing list</a>.
+                        If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>.
                       </div>
                     </div>
                   </div>
@@ -786,7 +787,7 @@
                       data-parent="#accordionEx">
                       <div class="card-body">
                         <p>
-                          If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/df8UOn">mailing list</a>.
+                          If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>.
                         </p>
                       </div>
                     </div>
@@ -818,8 +819,8 @@
                       data-parent="#accordionEx2">
                       <div class="card-body">
                         <p>
-                          All course materials available online for free. If you are an instructor and would like to use any materials from this course (slides, labs, code), you must add the following reference to each slide:
-                          <blockquote><b>&copy;	MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
+                          All course materials available online for free but are copyrighted and licensed under the <a href="https://github.com/aamini/introtodeeplearning/blob/master/LICENSE.md">MIT license</a>. If you are an instructor and would like to use any materials from this course (slides, labs, code), you must add the following reference to each slide:
+                          <blockquote><b>&copy;	Alexander Amini and Ava Soleimany<br>MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
                         </p>
                       </div>
                     </div>
@@ -843,8 +844,8 @@
                       data-parent="#accordionEx2">
                       <div class="card-body">
                         <p>
-                          All course materials are copyrighted. If you are an instructor and would like to use any materials from this course (slides, labs, code), you must add the following reference to each slide:
-                          <blockquote><b>&copy;	MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
+                          All course materials are copyrighted and licensed under the <a href="https://github.com/aamini/introtodeeplearning/blob/master/LICENSE.md">MIT license</a>. If you are an instructor and would like to use any materials from this course (slides, labs, code), you must add the following reference to each slide:
+                          <blockquote><b>&copy;	Alexander Amini and Ava Soleimany<br>MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
                         </p>
                       </div>
                     </div>
@@ -1265,10 +1266,197 @@
     <!-- end of copyright -->
 
 
+
+    <!-- Modal -->
+    <div class="modal fade" id="ibm_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/cox.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Neurosymbolic Hybrid AI</h3>
+                  <h5 align="left">David Cox; Director of MIT-IBM Watson AI Lab</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  Artificial intelligence and machine learning have experienced a renaissance in the past decade, thanks largely to the success of deep learning methods. However, while deep learning has proven itself to be extremely powerful, most of today’s most successful deep learning systems suffer from a number of important limitations, ranging from the requirement for enormous training data sets to lack of interpretability to vulnerability to “hacking” via adversarial examples. In my talk, I will survey some of these limitations and propose that one path forward involves building hybrid systems that combine neural networks with techniques and ideas from symbolic AI, a parallel tradition of AI whose origins date back to the beginning of AI. I will show example neurosymbolic hybrid systems where neural networks and symbolic systems complement each other’s strengths and weaknesses, enabling systems that are accurate, sample efficient, and interpretable. Finally, I will show other directions we are pursuing in the space of neural-symbolic hybrid systems, and argue that these methods at the intersection provide a powerful path forward for the broad adoption of AI.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  David Cox is the IBM Director of the MIT-IBM Watson AI Lab, a first of its kind industry-academic collaboration between IBM and MIT, focused on fundamental research in artificial intelligence.  David's ongoing research is primarily focused on bringing insights from neuroscience into machine learning and computer vision research. His work has spanned a variety of disciplines, from imaging and electrophysiology experiments in living brains, to the development of machine learning and computer vision methods, to applied machine learning and high performance computing methods.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="nvidia_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/animesh.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Generalizable Autonomy in Robotics</h3>
+                  <h5 align="left">Animesh Garg; ML and Robotics, NVIDIA</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  Data-driven methods in Robotics circumvent hand-tuned feature engineering, albeit lack guarantees and often incur a massive computational expense. My research aims to bridge this gap and enable generalizable imitation for robot autonomy. We need to build systems that can capture semantic task structures that promote sample efficiency and can generalize to new task instances across visual, dynamical or semantic variations. And this involves designing algorithms that unify learning with perception, control and planning. In this talk, I will how inductive biases and priors help with Generalizable Autonomy. First I will talk about choice of action representations in RL and imitation from ensembles of suboptimal supervisors. Then I will talk about latent variable models in self-supervised learning. Finally I will talk about meta-learning for multi-task learning and data gather in robotics.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Animesh Garg is a CIFAR AI Chair Assistant Professor of at University of Toronto and Vector Institute. He is also a Senior Research Scientist at Nvidia.
+His research interests focus on intersection of Learning & Perception in Robot Manipulation. He works on efficient generalization in large scale imitation learning.
+Animesh works applications of robot manipulation in surgery and manufacturing as well as personal robotics. Previously, Animesh received his Ph.D. from the University of California, Berkeley and a postdoc at Stanford AI Labs. His work has won multiple best paper awards and nominations including ICRA 2019, ICRA 2015 and IROS 2019, among others and has also featured in press outlets such as New York Times, BBC, and Wired.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="lambda_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/chuan.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Neural Rendering</h3>
+                  <h5 align="left">Chuan Li; Chief Scientific Officer, Lambda Labs</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  In this talk, we will review modern rendering techniques and discuss how deep learning can extend the gamut of this long-lasting research topic. We will investigate deep neural networks as 1) plug-and-play sub-modules that reduce the cost of physically-based rendering; 2) end-to-end pipelines that inspire novel graphics applications. In particular, we will focus on "differentiable rendering," a methodology that solves complex inverse graphics problems and achieved great success in scene reconstruction, generation, and depiction.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                Chuan Li is a research scientist at Lambda Labs. His work focuses specifically on the convergent field of computer graphics, computer vision, and machine learning. He completed his Ph.D. in image-based modeling at the University of Bath. Before joining Lambda Labs, he was a Postdoc researcher at Max Planck Institute of Informatics and a research associate at Utrecht University and Mainz University. His research in visual data analysis and synthesis was published at CVPR, ICCV, ECCV, NIPS, Siggraph.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="google_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/alexwiltschko.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Machine Learning for Scent</h3>
+                  <h5 align="left">Alex Wiltschko; Senior Research Scientist, Google Brain</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  Predicting the relationship between a molecule's structure and its odor remains a difficult, decades-old task. This problem, termed quantitative structure-odor relationship (QSOR) modeling, is an important challenge in chemistry, impacting human nutrition, manufacture of synthetic fragrance, the environment, and sensory neuroscience. We use of graph neural networks for QSOR, and show they significantly out-perform prior methods on a novel data set labeled by olfactory experts. Additional analysis shows that the learned embeddings from graph neural networks capture a meaningful odor space representation of the underlying relationship between structure and odor, as demonstrated by strong performance on two challenging transfer learning tasks. Machine learning has already had a large impact on the senses of sight and sound. Based on these early results with graph neural networks for molecular properties, we hope machine learning can eventually do for olfaction what it has already done for vision and hearing.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Alex Wiltschko is a research scientist at Google Brain, focusing on building more flexible machine learning software systems, and also applications of machine learning to biology. He has helped build several machine learning libraries, including torch-autograd, and Tangent, a compiler-based autodiff library for Python at Google. He completed his PhD in Neurobiology at Harvard, focusing on quantifying behavior and body language using depth cameras and nonparametric time-series modeling.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="assets/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="assets/js/bootstrap.min.js?v=1"></script> <!-- Bootstrap framework -->
     <script src="assets/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
     <script src="assets/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
     <script src="assets/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
