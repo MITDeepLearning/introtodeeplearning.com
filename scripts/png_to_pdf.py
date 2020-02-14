@@ -27,9 +27,9 @@ args = parser.parse_args()
 #
 # for image in tqdm(glob.glob(os.path.join(args.input, "*.png"))):
 #     data = cv2.imread(image)
-#     background_color = get_most_common_color(data)
-#     rgba = remove_color(data, background_color)
-#     cv2.imwrite(image+".alpha.png", rgba)
+#     # background_color = get_most_common_color(data)
+#     # rgba = remove_color(data, background_color)
+#     cv2.imwrite(image+".comp.png", data, [cv2.IMWRITE_PNG_COMPRESSION, 9])
 
 
 pdf = fpdf.FPDF(format=(1280,720))
