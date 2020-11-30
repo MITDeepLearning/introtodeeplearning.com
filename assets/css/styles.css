@@ -148,12 +148,12 @@ highlight {
 
 .btn-solid-reg {
 	display: inline-block;
-	padding: 1.1875rem 2.125rem 1.1875rem 2.125rem;
+	padding: 0.75rem 2.125rem 0.75rem 2.125rem;
 	border: 0.125rem solid #00c9db;
 	border-radius: 2rem;
 	background-color: #00c9db;
 	color: #fff;
-	font: 700 0.75rem/0 "Montserrat", sans-serif;
+	font: 700 0.75rem "Montserrat", sans-serif;
 	text-decoration: none;
 	transition: all 0.2s ease;
 }
