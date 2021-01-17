@@ -117,7 +117,23 @@ class FakeMicrophoneLoop:
 
 
     def go(self):
-        tic = time.time()
         print (self.command)
+        tic = time.time()
         pipe = sp.Popen(self.command, stdout=self.device, stderr=open(os.devnull, 'w'))
+        return tic
+
+
+
+class FakeScreenLoop:
+    def __init__(self, file):
+        command = ["ffplay"]
+        command += ['-fflags', 'nobuffer'] # Read input at native frame rate
+        command += [str(file)]
+        self.command = command
+
+
+    def go(self):
+        print (self.command)
+        tic = time.time()
+        pipe = sp.Popen(self.command, stdout=open(os.devnull, 'w'), stderr=open(os.devnull, 'w'))
         return tic
