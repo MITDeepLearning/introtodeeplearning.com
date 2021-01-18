@@ -20,6 +20,9 @@ from PIL import Image, ImageTk
 # Camera: CamNet Webcam
 
 
+# REAL LECTURE 1: 
+# https://mit.zoom.us/j/97105519647
+
 
 
 # file = "/home/amini/Dropbox (MIT)/Ava_Xan/6S191/video/2020/compositions/Obama_AME/clip.mp4"
@@ -27,8 +30,8 @@ from PIL import Image, ImageTk
 # path_screen_file = "/home/amini/Downloads/techcrunch.mkv"
 # path_webcam_file = "/home/amini/Downloads/1_Webcam_1_clip.mp4"
 # path_screen_file = "/home/amini/Downloads/2_Screen_2_clip.mp4"
-path_webcam_file = "/media/amini/Samsung_T5/6S191_2021/sync/L1_AME/1_Webcam_Clip_Final_1.mp4"
-path_screen_file = "/media/amini/Samsung_T5/6S191_2021/sync/L1_AME/2_Screen_Clip_Final_1.mp4"
+path_webcam_file = "/home/amini/6.S191_STREAM/L1/1_Webcam_Clip_Final_1.mp4"
+path_screen_file = "/home/amini/6.S191_STREAM/L1/2_Screen_Clip_Final_1.mp4"
 
 
 
