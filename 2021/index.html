@@ -1,0 +1,1653 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28199335-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-28199335-3');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="mit deep learning,deep learning,mit,introduction to deep learning,mit 6.s191,alexander amini,ava soleimany" />
+    <meta name="author" content="MIT Deep Learning">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+  	<meta property="og:site_name" content="MIT Deep Learning 6.S191" /> <!-- website name -->
+  	<meta property="og:site" content="http://introtodeeplearning.com" /> <!-- website link -->
+  	<meta property="og:title" content="MIT Deep Learning 6.S191"/> <!-- title shown in the actual shared post -->
+  	<meta property="og:description" content="MIT's introductory course on deep learning methods and applications." /> <!-- description shown in the actual shared post -->
+  	<meta property="og:url" content="http://introtodeeplearning.com" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <link rel="image_src" href="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta property="og:image" content="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta name="twitter:description" content="MIT's introductory course on deep learning methods and applications" />
+
+
+    <!-- Website Title -->
+    <title>MIT Deep Learning 6.S191</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="assets/css/fontawesome-all.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/swiper.css" rel="stylesheet">
+  	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+  	<link href="assets/css/styles.css?v=1" rel="stylesheet">
+
+  	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.svg" alt="MIT 6.S191"></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#overview">OVERVIEW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#schedule">SCHEDULE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#team">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#faq">F.A.Q.</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link page-scroll" href="#sponsors">SPONSORS</a>
+                </li>-->
+
+            </ul>
+            <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="https://twitter.com/MITDeepLearning">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <script>
+			// Set the date we're counting down to
+      var registrationDate = new Date("Dec 1, 2020 09:00:00 GMT-05:00").getTime();
+			var registrationHeader = "";
+			var registrationMIT = "";
+			var registrationPublic = "";
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get todays date and time
+			  var now = new Date().getTime();
+
+			  // Find the distance between now and the count down date
+        var registrationDistance = registrationDate - now;
+
+        var registrationCounter = "";
+				if (registrationDistance > 0) {
+
+				  // Time calculations for days, hours, minutes and seconds
+				  var days = Math.floor(registrationDistance / (1000 * 60 * 60 * 24));
+				  var hours = Math.floor((registrationDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				  var minutes = Math.floor((registrationDistance % (1000 * 60 * 60)) / (1000 * 60));
+				  var seconds = Math.floor((registrationDistance % (1000 * 60)) / 1000);
+
+				  // Display the result in the element with id="demo"
+				  registrationCounter = "<h3>New virtual course content coming soon!</h3>"
+						+ "<h3>Pre-registration opening in <highlight>"
+						+ days + "d "
+						+ hours + "h "
+						+ minutes + "m "
+						+ seconds + "s "
+						+"</highlight></h3>";
+
+				} else {
+				// If the count down is finished, write some text
+			    clearInterval(x);
+					// registrationCounter = "<h3><highlight>Registration is now open to all!!</highlight></h3>";
+					registrationCounter = "<h3>MIT IAP 2021 (winter term)</h3>"
+					registrationHeader = "<h4>Register and signup for the mailing list:</h4>";
+					registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';
+					registrationPublic = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> Everyone</h4>All: Public and MIT students</a> &nbsp';
+					mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
+            // registrationCounter = "<h3>Course lectures are now LIVE!</h3>"
+  					// 	+ '<br><a class="btn-solid-reg page-scroll" href="#schedule"><i class="fas fa-graduation-cap"></i><emsp> SCHEDULE</a> &nbsp';
+			  }
+
+        // var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+        var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1"><i class="fas fa-envelope"></i><emsp> LECTURE PLAYLIST</a>';
+        document.getElementById("registration").innerHTML = ""; //registrationCounter; // + registrationHeader + registrationPublic;
+			}, 1000);
+		</script>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1><highlight>MIT 6.S191</highlight></h1>
+                            <h1>Introduction to<br>Deep Learning</h1>
+                            <h6>MIT's introductory course on deep learning methods with applications in <span id="js-rotating">computer vision, robotics, medicine, language, game play, art</span>, and more!</h6>
+                        </div>
+                    </div> <!-- end of col -->
+
+                    <!-- Video -->
+                    <div class="col-lg-6" style="margin-top:auto; margin-bottom:auto;">
+                        <div id="preview" class="basic-1">
+
+                          <!-- Video Preview -->
+                          <div class="image-container">
+                              <div class="video-wrapper">
+                                  <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1" data-effect="fadeIn"> -->
+                                  <a class="popup-youtube" href="https://www.youtube.com/watch?v=_f-W98_WHHc" data-effect="fadeIn">
+
+                                      <img class="img-fluid" src="images/video-frame.jpg" alt="alternative">
+                                      <span class="video-play-button">
+                                          <span></span>
+                                      </span>
+                                  </a>
+                              </div> <!-- end of video-wrapper -->
+                          </div> <!-- end of image-container -->
+                          <!-- end of video preview -->
+
+                        </div> <!-- end of basic-1 -->
+                    </div> <!-- end of col -->
+                    <!-- end of video -->
+
+
+                </div> <!-- end of row -->
+
+                <div class="row">
+                  <div class="col-lg-12 card-center" style="margin-top:2rem">
+                      <div id="registration"></div> <br>
+                  </div>
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <div class="tabs darker-background">
+        <div id="overview" class="anchor"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="text-container">
+                <h2>Course Description</h2>
+                <p style="text-align:center">
+                  MIT's introductory course on deep learning methods with applications to computer vision, natural language processing, biology, and more! Students will gain foundational knowledge of deep learning algorithms and get practical experience in building neural networks in TensorFlow. Course concludes with a project proposal competition with feedback from staff and panel of industry sponsors. Prerequisites assume calculus (i.e. taking derivatives) and linear algebra (i.e. matrix multiplication), we'll try to explain everything else along the way! Experience in Python is helpful but not necessary. This class is taught during MIT's IAP term by current MIT PhD researchers. Listeners are welcome!<br>
+									<b><highlight>A complete syllabus, grading info, and student deliverables is available <a href="https://docs.google.com/document/d/1p1zAcNlogBCQFDXnSntwHFQ06pwmzewXpiQns-KfOd8/edit?usp=sharing"><highlight>HERE</highlight></a>.</highlight></b>
+                </p>
+
+              </div>
+            </div>  <!-- end col-lg-7  -->
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-4">
+              <div class="text-container">
+                <h2>Time and Location</h2>
+                <h5 style="text-align:center">Mon Jan 18 - Fri Jan, 29 2021 (IAP)</h5>
+                <p style="text-align:center">
+									<b>Everyday (M-F), 1:00-3:00pm EST</b><br><br>
+									1:00pm-2:00pm: Technical lecture<br>
+									2:00pm-3:00pm: Software labs and<br>office hours on MIT Gather.Town<br><br>
+									Note: Times above are for MIT students. All course materials will be released to the public afterwards.
+                </p>
+              </div>
+            </div>  <!-- end col-lg-4  -->
+          </div> <!-- end row -->
+          <br>
+
+        </div>
+    </div>
+
+    <!-- Schedule -->
+    <div class="tabs">
+        <div id="schedule" class="anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Course Schedule</h2>
+										<h5 align="center">Lectures occured during MIT IAP 2021. All lectures, slides, and labs are now available!</h5>
+		    <br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+
+            <!-- Day 1 -->
+            <div class="row">
+              <!-- Lecture 1 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                          <img src="images/thumb/L1.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Intro to Deep Learning</highlight</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 1</h6>
+										<i>Feb. 05, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=5tvmMX8r_OM&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>]</p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 1 -->
+              <!-- Lecture 2 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/L2.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Sequence Modeling</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 2</h6>
+										<i>Feb. 12, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=qjrad0V0uJE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>Feb 12, 2020</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 2 -->
+
+              <!-- Lab 1 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/Lab1.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Intro to TensorFlow; <br>Music Generation</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 1</h6>
+										<!-- <i>Due Jan. 26, 2021</i> -->
+										<p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p>
+										<!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 1 -->
+
+            </div> <!-- end of Day 1 -->
+
+
+            <!-- Day 2 -->
+            <div class="row">
+              <!-- Lecture 3 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/L3.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Computer Vision</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 3</h6>
+										<i>Feb. 19, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=AjtX1N_VT9E&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=3'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 3 -->
+
+              <!-- Lecture 4 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/L4.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Generative Modeling</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 4</h6>
+										<i>Feb. 26, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BUNl0To1IVw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 4 -->
+
+              <!-- Lab 2 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/Lab2.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>De-biasing Facial Recognition Systems</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 2</h6>
+										<!-- <i>Mar. 05, 2021</i> -->
+                    <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p>
+										<!-- <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<b>Code</b>] <i>coming soon!</i></p> -->
+
+                  </div>
+                </div>
+              </div> <!-- end of Lab 2 -->
+
+            </div> <!-- end of Day 2 -->
+
+
+            <!-- Day 3 -->
+            <div class="row">
+              <!-- Lecture 5 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/L5.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Reinforcement Learning</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 5</h6>
+										<i>Mar. 05, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=93M1l_nrhpQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 5 -->
+
+              <!-- Lecture 6 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/L6.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Limitations and New Frontiers</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 6</h6>
+										<i>Mar. 12, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=-boCMDouF2g&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 6 -->
+
+              <!-- Lab 3 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/Lab3.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Pixels-to-Control Learning</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 3</h6>
+										<!-- <i>Due Jan. 26, 2021</i> -->
+                    <p> [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] </p>
+										<!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 3 -->
+
+            </div> <!-- end of Day 3 -->
+
+
+
+
+            <!-- Hot Topics -->
+            <div class="row">
+              <!-- Hop Topic 1 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/dice.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Evidential Deep Learning</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 7</h6>
+										<i>Mar. 19, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=toTcf7tZK8c&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Hop Topic 1 -->
+
+              <!-- Hop Topic 2 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/bias.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+											<h5 class="card-title"><highlight>Bias and Fairness</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 8</h6>
+										<i>Mar. 26, 2021</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=wmyVODy_WD8&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Hop Topic 2 -->
+
+              <!-- Project Proposal -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/chalk.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Project Proposals</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+										<h6 class="card-title">Work on Final Proposals</h6>
+										<!-- <i>Due Jan. 27, 2021</i> -->
+                    <!-- <p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] [<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] </p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Project Proposal -->
+
+            </div> <!-- end of Hot Topics -->
+
+
+
+            <!-- Day 4 -->
+            <div class="row">
+              <!-- Lecture 7 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/document.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Learning for Information Extraction</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 9</h6>
+										<i>Apr. 02, 2021</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#EY_modal">Info</a>] -->
+										<!-- [<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=4PuuziOgSU4&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>]</p> -->
+										<p>[<a data-toggle="modal" data-target="#EY_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=WkUYsVC3hKI&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>] </p>
+											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 7 -->
+
+              <!-- Lecture 8 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/car_bias.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Taming Dataset Bias</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 10</h6>
+										<i>Apr. 09, 2021</i>
+                    <!-- <p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=8Kn4Gi8iSYQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8'>Video</a>]</p> -->
+										<p>[<a data-toggle="modal" data-target="#ibm_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=eS-OHAHOqU0&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>] </p>
+											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 8 -->
+
+              <!-- Lab 4 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/work.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Final Project</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Paper review</h6>
+										<!-- <i>Due Jan. 28, 2021</i> -->
+                    <p></p>
+                  </div>
+                </div>
+              </div> <!-- end of Lab 4 -->
+
+            </div> <!-- end of Day 4 -->
+
+            <!-- Day 5 -->
+            <div class="row">
+              <!-- Lecture 9 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/L9.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Towards AI for 3D Content Creation</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 11</h6>
+										<i>Apr. 16, 2021</i>
+                    <!-- <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
+										<p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>][<a href='https://www.youtube.com/watch?v=lkkFcg9k9ho&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=11'>Video</a>] </p>
+											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 9 -->
+
+              <!-- Lecture 10 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/health.gif" alt="">
+                        <!-- <img src="images/thumb/mystery4.jpg" alt=""> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>AI in Healthcare</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 12</h6>
+										<i>Apr. 23, 2021</i>
+                    <!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L10.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=Z5Pw5eWItiw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>]</p> -->
+										<p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=cvXVK8oqU4Q&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=12'>Video</a>] </p>
+											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 10 -->
+
+              <!-- Lab 5 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/work.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Final Project</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Work on Final Projects</h6>
+<!--                     <p>[Video] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 5 -->
+
+            </div> <!-- end of Day 5 -->
+
+
+						<!-- Day 5 -->
+            <div class="row">
+              <!-- Lecture 9 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/present.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Project Presentations</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Project Pitches</h6>
+										<!-- <i>Jan. 29, 2021</i> -->
+                    <!-- <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
+										<!-- <p>[<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 9 -->
+
+              <!-- Lecture 10 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/present.jpg" alt="">
+                        <!-- <img src="images/thumb/mystery4.jpg" alt=""> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Project Presentations</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Project Pitches</h6>
+										<!-- <i>Jan. 29, 2021</i> -->
+                    <!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L10.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=Z5Pw5eWItiw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>]</p> -->
+										<!-- <p>[<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Project Presentations 2 -->
+
+              <!-- Lab 5 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/awards.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Awards Ceremony</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Winners announced!</h6>
+										<!-- <i>Jan. 29, 2021</i> -->
+<!--                     <p>[Video] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Awards -->
+
+            </div> <!-- end of Project Day -->
+
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of schedule -->
+
+    <div class="tabs darker-background">
+      <div id="faq" class="anchor"></div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Frequently Asked Questions</h2>
+            <div class="text-container card-center">
+              <h5>For any other questions please reach out to the course staff at <a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a>.</h5>
+              <br>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+                <!--Accordion wrapper-->
+                <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingOne1">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_listeners"
+                        aria-expanded="false" aria-controls="collapse_listeners">
+                        <h5 class="mb-0 card-center">
+                          Are listeners allowed to attend?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_listeners" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        All listeners are welcome to attend!<br>
+                        <ul>
+                          <li>If you are an MIT student, please formally register as a listener on Websis.
+                            <a lass="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">Click here</a> for instructions</li>
+                          <li>If you are not an MIT student, you can still attend the course without registering. <!--Everyone can also sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a> if you'd like to receive class related announcements.--></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingOne1">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_grade"
+                        aria-expanded="false" aria-controls="collapse_grade">
+                        <h5 class="mb-0 card-center">
+                          What is the grading policy?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_grade" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        6.S191 is offered as a 6 units course and graded P/D/F based on completion of project proposal assignment. Listeners also welcome!
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingTwo2">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                        aria-expanded="false" aria-controls="collapseTwo2">
+                        <h5 class="mb-0 card-center">
+                          How can I register?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        <!-- Registration opens on Dec 1, 2020 at 9am. If you are an MIT student (student, postdoc, or faculty) please <a href="https://student.mit.edu/cgi-bin/sfprwtrm.sh">register here</a> after registration opens. You can specify if you want to take the course for credit or as a listener there. -->
+                        If you are an MIT student please <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">register here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 6 units when prompted. You can also specify if you want to be registered as a listener or regular student there.
+												After the MIT course, the course will be made publically available to non-MIT affiliates as well. Please sign up for the mailing list to receive updates when this occurs.
+                        <!-- If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>. -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_prereq"
+                        aria-expanded="false" aria-controls="collapse_prereq">
+                        <h5 class="mb-0 card-center">
+                          What pre-requisites are required?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_prereq" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        <p>
+                          We are expecting very elementary knowledge of linear algebra and calculus. How to multiply matrices, take derivatives and apply the chain rule. Familiarity in Python is a big plus as well.
+                          The course will be beginner friendly since we have many registered students from outside of computer science.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_mailing"
+                        aria-expanded="false" aria-controls="collapse_mailing">
+                        <h5 class="mb-0 card-center">
+                          Is there a mailing list I can join?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_mailing" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        <p>
+													<!-- If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>. -->
+													If you would like to receive course related updates and lecture materials please subscribe to our <a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg">YouTube channel</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-6">
+              <!--Accordion wrapper-->
+              <div class="accordion md-accordion" id="accordionEx2" role="tablist" aria-multiselectable="true">
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_open"
+                        aria-expanded="false" aria-controls="collapse_open">
+                        <h5 class="mb-0 card-center">
+                          Are the course materials open-source?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_open" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          All course materials available online for free but are copyrighted and licensed under the <a href="https://github.com/aamini/introtodeeplearning/blob/master/LICENSE.md">MIT license</a>. If you are an instructor and would like to use any materials from this course (slides, labs, code), you must add the following reference to each slide:
+                          <blockquote><b>&copy;	Alexander Amini and Ava Soleimany<br>MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_copywrite"
+                        aria-expanded="false" aria-controls="collapse_copywrite">
+                        <h5 class="mb-0 card-center">
+                          How do I reference these course materials?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_copywrite" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          All course materials are copyrighted and licensed under the <a href="https://github.com/aamini/introtodeeplearning/blob/master/LICENSE.md">MIT license</a>. If you are an instructor and would like to use any materials from this course (slides, labs, code), you must add the following reference to each slide:
+                          <blockquote><b>&copy;	Alexander Amini and Ava Soleimany<br>MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_teaching"
+                        aria-expanded="false" aria-controls="collapse_teaching">
+                        <h5 class="mb-0 card-center">
+                          How can I help teach this class?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_teaching" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          If you are an MIT student, postdoc, faculty, or affiliate and would like to become involved with this course please email <a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a>. We are always accepting new applications to join the course staff.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_sponsor"
+                        aria-expanded="false" aria-controls="collapse_sponsor">
+                        <h5 class="mb-0 card-center">
+                          How can I become a course sponsor?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_sponsor" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          This class would not be possible without our amazing sponsors and has been sponsored by Google, IBM, NVIDIA, Ernst and Young, LambdaLabs and Onepanel. If you are interesting in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_previous"
+                        aria-expanded="false" aria-controls="collapse_previous">
+                        <h5 class="mb-0 card-center">
+                          Where are the past course websites?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_previous" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          To view archived versions of this website from past years please click here for <a href="./2020/index.html">2020</a>, <a href="./2019/index.html">2019</a>, <a href="./2018/index.html">2018</a>, and <a href="./2017/index.html">2017</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                </div>
+                <!-- Accordion wrapper -->
+          </div> <!-- end col-lg-6  -->
+        </div> <!-- end row  -->
+
+
+      </div>
+    </div>
+
+
+    <!-- Team -->
+    <div class="slider-1">
+        <div id="team" class="anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="title card-center">
+                    <h2>6.S191 Team</h2>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-3">
+                  <div class="card card-center">
+                      <img class="card-image card-main-image" src="images/people/amini.jpg" alt="amini">
+                      <div class="card-body">
+                          <p class="testimonial-author">Alexander Amini</p>
+                          <p class="testimonial-text">Lead Organizer<br>Instructor</p>
+
+                          <span class="fa-stack">
+                              <a href="https://www.mit.edu/~amini">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fas fa-globe fa-stack-1x"></i>
+                              </a>
+                          </span>
+                          <span class="fa-stack">
+                              <a href="https://www.linkedin.com/in/alexanderamini/">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fab fa-linkedin fa-stack-1x"></i>
+                              </a>
+                          </span>
+                          <span class="fa-stack">
+                              <a href="https://twitter.com/xanamini">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fab fa-twitter fa-stack-1x"></i>
+                              </a>
+                          </span>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card card-center">
+                      <img class="card-image card-main-image" src="images/people/asolei.jpg" alt="asolei">
+                      <div class="card-body">
+                        <p class="testimonial-author">Ava Soleimany</p>
+                        <p class="testimonial-text">Lead Organizer<br>Instructor</p>
+
+			<span class="fa-stack">
+                            <a href="https://www.mit.edu/~asolei">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-globe fa-stack-1x"></i>
+                            </a>
+                        </span>
+
+                        <span class="fa-stack">
+                            <a href="https://www.linkedin.com/in/ava-soleimany-7b9946129/">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/apsoleimany">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3"></div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="subtitle card-center">
+                    <h3>Teaching Assistants</h3>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="images/people/carmen.jpg" alt="carmen">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Carmen Martin Alonso</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="images/people/williamchen.jpg" alt="williamchen">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">William Chen</p>
+                                    </div>
+                                  </div>
+                              </div>
+															<!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="images/people/kristian.jpg" alt="kristian">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Kristian Georgiev</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+                              <!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="images/people/shinjini.jpg" alt="shinjini">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Shinjini Ghosh</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                  <div class="card">
+                                      <img class="card-image card-sub-image" src="images/people/juliamoseyko.jpg" alt="julia">
+                                      <div class="card-body">
+                                        <p class="testimonial-author">Julia Moseyko</p>
+                                      </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                  <div class="card">
+                                      <img class="card-image card-sub-image" src="images/people/jacobphillips.jpg" alt="jacob">
+                                      <div class="card-body">
+                                        <p class="testimonial-author">Jacob Phillips</p>
+                                      </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+																<!-- Slide -->
+	                              <div class="swiper-slide">
+	                                <div class="card">
+	                                    <img class="card-image card-sub-image" src="images/people/ryansander.jpg" alt="rsander">
+	                                    <div class="card-body">
+	                                      <p class="testimonial-author">Ryan Sander</p>
+	                                    </div>
+	                                  </div>
+	                              </div> <!-- end of swiper-slide -->
+	                              <!-- end of slide -->
+
+																<!-- Slide -->
+	                              <div class="swiper-slide">
+	                                <div class="card">
+	                                    <img class="card-image card-sub-image" src="images/people/sledzieski.jpg" alt="sledzieski">
+	                                    <div class="card-body">
+	                                      <p class="testimonial-author">Sam Sledzieski</p>
+	                                    </div>
+	                                  </div>
+	                              </div> <!-- end of swiper-slide -->
+	                              <!-- end of slide -->
+
+                                <!-- Slide -->
+                                <div class="swiper-slide">
+                                  <div class="card">
+                                      <img class="card-image card-sub-image" src="images/people/yang.jpg?v=2" alt="gilbert">
+                                      <div class="card-body">
+                                        <p class="testimonial-author">Gilbert Yang</p>
+                                      </div>
+                                    </div>
+                                </div> <!-- end of swiper-slide -->
+                                <!-- end of slide -->
+
+                            </div> <!-- end of swiper-wrapper -->
+
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row card-center">
+              <div class="col-lg-12">
+                  <h5>We are always accepting new applications to join the course staff. If you are interested in becoming a TA, please contact <a href="mailto:introtodeeplearning-staff@mit.edu" target="_top">introtodeeplearning-staff@mit.edu</a></h5>
+              </div>
+            </div>
+        </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of team -->
+
+
+    <!-- Details 1 -->
+    <div class="basic-2">
+        <div id="sponsors" class="anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 card-center">
+                  <div class="title">
+                    <h2>Sponsors</h2>
+                  </div>
+                  <h5>This class and delivery would not be possible without our amazing sponsors! If you are interesting in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b></h5>
+                  <br>
+                  <img class="img-fluid" src="images/sponsor_logos_background_2021.png?v=6" alt="">
+
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 1 -->
+
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>About 6.S191</h4>
+                        <p>6.S191 is MIT's introductory course on deep learning!</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Lectures and Labs</h4>
+                        <p>We open-source all class materials. Checkout the lecture schedule for details!</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Social Media</h4>
+                        <span class="fa-stack">
+                            <a href="mailto:introtodeeplearning-staff@mit.edu">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/MITDeepLearning">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © MIT 6.S191. <a href="https://github.com/lengstrom/fast-style-transfer/">banner image</a>; <a href="https://inovatik.com">page template</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="EY_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/nigel.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Deep Learning for Information Extraction</h3>
+                  <h5 align="left">Nigel Duffy; Global Artificial Intelligence Leader, Ernst & Young</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  We combine deep learning and Conditional Probabilistic Context Free Grammars (CPCFG) to create an end-to-end system for extracting structured information from complex documents. For each class of documents, we create a CPCFG that describes the structure of the information to be extracted. Conditional probabilities are modeled by deep neural networks. We use this grammar to parse 2-D documents to directly produce structured records containing the extracted information. This system is trained end-to-end with (Document, Record) pairs. We apply this approach to extract information from scanned invoices achieving state-of-the-art results.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+									Nigel is a technologist and entrepreneur serving as Global Artificial Intelligence (AI) Leader in Global Innovation at Ernst & Young (EY). In this role, he is responsible for the application of AI throughout EY.
+									As leader of the EY AI Lab, he is responsible for projects driving strategic transformation of how we operate, compete and provide services. He is also strengthening relationships with start-ups and academic communities worldwide.
+									He holds a master’s degree in Mathematics from University College Dublin and a PhD in Machine Learning from the University of California, Santa Cruz. His original research includes the first theoretical papers on gradient boosting.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="ibm_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/kate.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Taming Dataset Bias via Domain Adaptation</h3>
+                  <h5 align="left">Kate Saenko; Faculty at Boston University and MIT-IBM Watson AI Lab</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  Deep Learning has made exciting progress on many computer vision problems, but it requires large datasets that can be expensive and time-consuming to collect and label. Datasets also suffer from “dataset bias,” which happens when the training data is not representative of the future deployment domain. Dataset bias is a major pervasive problem in computer vision -- even the most powerful deep neural networks fail to generalize to out-of-sample data. A classic example of this is when a network trained to classify handwritten digits fails to recognize typed digits, but this problem happens in most practical situations, as no finite dataset is rich enough to represent the full complexity of the visual world. Can we solve dataset bias and learn with only a limited amount of supervision? Indeed, we can, under certain assumptions. I will describe past and recent work based on domain adaptation of deep learning models and point out several assumptions these methods make and situations they fail to handle. I will also describe recent efforts to improve adaptation by using unlabeled data to learn better features, with ideas from semi-supervised and self-supervised learning.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Kate is an Associate Professor of Computer Science at Boston University and a consulting professor for the MIT-IBM Watson AI Lab. She leads the Computer Vision and Learning Group at BU, is the founder and co-director of the Artificial Intelligence Research (AIR) initiative, and member of the Image and Video Computing research group. Kate received a PhD from MIT and did her postdoctoral training at UC Berkeley and Harvard. Her research interests are in the broad area of Artificial Intelligence with a focus on dataset bias, adaptive machine learning, learning for image and language understanding, and deep learning.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="nvidia_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/sanja.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">Towards AI for 3D Content Creation</h3>
+                  <h5 align="left">Sanja Fidler; Professor U. of Toronto and Head of AI at NVIDIA</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  3D content is key in several domains such as architecture, film, gaming, and robotics. However, creating 3D content can be very time consuming -- the artists need to sculpt high quality 3d assets, compose them into large worlds, and bring these worlds to life by writing behaviour models that "drives" the characters around in the world. This talk will discuss some of our recent efforts on introducing automation in the 3D content creation process using A.I.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                Sanja Fidler is an Associate Professor at the Department of Computer Science, University of Toronto. She joined UofT in 2014. In 2018, she took a role of Director of AI at NVIDIA, leading a research lab in Toronto. Previously she was a Research Assistant Professor at TTI-Chicago, a philanthropically endowed academic institute located in the campus of the University of Chicago. She completed her PhD in computer science at University of Ljubljana in 2010, and was a postdoctoral fellow at University of Toronto during 2011-2012. In 2010 she visited UC Berkeley as a visiting research scientist. She received the NVIDIA Pioneer of AI award, Amazon Academic Research Award, Facebook Faculty Award, and the Connaught New Researcher Award. In 2018 she was appointed as the Canadian CIFAR AI Chair. Her work on semi-automatic object instance annotation won the Best Paper Honorable Mention at CVPR’17. Her main research interests are scene parsing from images and videos, interactive annotation, 3D scene understanding, 3D content creation, and multimodal representations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="google_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+                    <img src="images/people/katherine.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h3 align="left">AI in Healthcare</h3>
+                  <h5 align="left">Katherine Chou; Director of Research and Innovations, Google</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  Investigate the role of tech and AI in improving healthcare and discuss the challenges we face when deploying in the real world.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+									Katherine Chou is the Director of Research and Innovations at Google, developing products that apply AI to healthcare and social good. Katherine is a serial intrapreneur at Google with a history of incubating products and establishing sustainable businesses.
+									She previously developed products within Google[x] Labs for Life Sciences (now Verily) and ran global teams to develop partner solutions and establish developer ecosystems for Mobile Payments, Mobile Search, GeoCommerce, and Android. She is also a co-founder and committee chair for the AI for Social Good program at Google.
+									Outside of Google, she is a Board member and Program Chair of Lewa Wildlife Conservancy, a fellow of the Zoological Society of London, and collaborates with other wildlife NGOs and the Cambridge Business Sustainability Programme in applying the Silicon Valley innovation mindset to new areas.
+									She holds a double major in Computer Science and Economics at Stanford University and an M.S. in CS.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="assets/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="assets/js/bootstrap.min.js?v=1"></script> <!-- Bootstrap framework -->
+    <script src="assets/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="assets/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="assets/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="assets/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="assets/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="assets/js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>

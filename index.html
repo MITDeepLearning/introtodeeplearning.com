@@ -117,7 +117,7 @@
 
     <script>
 			// Set the date we're counting down to
-      var registrationDate = new Date("Dec 1, 2020 09:00:00 GMT-05:00").getTime();
+      var registrationDate = new Date("Dec 1, 2021 09:00:00 GMT-05:00").getTime();
 			var registrationHeader = "";
 			var registrationMIT = "";
 			var registrationPublic = "";
@@ -141,7 +141,7 @@
 				  var seconds = Math.floor((registrationDistance % (1000 * 60)) / 1000);
 
 				  // Display the result in the element with id="demo"
-				  registrationCounter = "<h3>New virtual course content coming soon!</h3>"
+				  registrationCounter = "<h3>New course is coming soon!</h3>"
 						+ "<h3>Pre-registration opening in <highlight>"
 						+ days + "d "
 						+ hours + "h "
@@ -153,9 +153,9 @@
 				// If the count down is finished, write some text
 			    clearInterval(x);
 					// registrationCounter = "<h3><highlight>Registration is now open to all!!</highlight></h3>";
-					registrationCounter = "<h3>MIT IAP 2021 (winter term)</h3>"
-					registrationHeader = "<h4>Register and signup for the mailing list:</h4>";
-					registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';
+					registrationCounter = "<h3>MIT IAP 2022 (winter term)</h3>"
+					registrationHeader = "<h4>Register and signup here!</h4>";
+					registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://student.mit.edu/cgi-bin/sfprwtrm.sh"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';  // https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm
 					registrationPublic = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> Everyone</h4>All: Public and MIT students</a> &nbsp';
 					mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
             // registrationCounter = "<h3>Course lectures are now LIVE!</h3>"
@@ -164,7 +164,7 @@
 
         // var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
         var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/watch?v=njKP3FqW3Sk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1"><i class="fas fa-envelope"></i><emsp> LECTURE PLAYLIST</a>';
-        document.getElementById("registration").innerHTML = ""; //registrationCounter; // + registrationHeader + registrationPublic;
+        document.getElementById("registration").innerHTML = registrationCounter + registrationHeader + registrationMIT + registrationPublic;
 			}, 1000);
 		</script>
 
@@ -226,7 +226,7 @@
                 <h2>Course Description</h2>
                 <p style="text-align:center">
                   MIT's introductory course on deep learning methods with applications to computer vision, natural language processing, biology, and more! Students will gain foundational knowledge of deep learning algorithms and get practical experience in building neural networks in TensorFlow. Course concludes with a project proposal competition with feedback from staff and panel of industry sponsors. Prerequisites assume calculus (i.e. taking derivatives) and linear algebra (i.e. matrix multiplication), we'll try to explain everything else along the way! Experience in Python is helpful but not necessary. This class is taught during MIT's IAP term by current MIT PhD researchers. Listeners are welcome!<br>
-									<b><highlight>A complete syllabus, grading info, and student deliverables is available <a href="https://docs.google.com/document/d/1p1zAcNlogBCQFDXnSntwHFQ06pwmzewXpiQns-KfOd8/edit?usp=sharing"><highlight>HERE</highlight></a>.</highlight></b>
+									<!-- <b><highlight>A complete syllabus, grading info, and student deliverables is available <a href="https://docs.google.com/document/d/1p1zAcNlogBCQFDXnSntwHFQ06pwmzewXpiQns-KfOd8/edit?usp=sharing"><highlight>HERE</highlight></a>.</highlight></b> -->
                 </p>
 
               </div>
@@ -234,14 +234,15 @@
             <div class="col-lg-1"></div>
 
             <div class="col-lg-4">
-              <div class="text-container">
+							<div class="text-container">
                 <h2>Time and Location</h2>
-                <h5 style="text-align:center">Mon Jan 18 - Fri Jan, 29 2021 (IAP)</h5>
+                <h5 style="text-align:center">Mon Jan 24 - Fri Jan 28, 2022</h5>
                 <p style="text-align:center">
-									<b>Everyday (M-F), 1:00-3:00pm EST</b><br><br>
-									1:00pm-2:00pm: Technical lecture<br>
-									2:00pm-3:00pm: Software labs and<br>office hours on MIT Gather.Town<br><br>
-									Note: Times above are for MIT students. All course materials will be released to the public afterwards.
+                  <b>1:00pm - 4:00pm EST Everyday</b><br><br>
+                  1:00pm-1:45pm: Lecture Part 1<br>
+                  1:45pm-2:30pm: Lecture Part 2<br>
+                  2:30pm-4:00pm: Software Labs<br><br>
+									Classes will take place physically in MIT Room <b>TBD</b>. <!-- <a href="https://whereis.mit.edu/?go=26">26-100</a> -->
                 </p>
               </div>
             </div>  <!-- end col-lg-4  -->
@@ -258,7 +259,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h2>Course Schedule</h2>
-										<h5 align="center">Lectures occured during MIT IAP 2021. All lectures, slides, and labs are now available!</h5>
+										<h5 align="center">New lectures, slides, and labs for 2022 are coming soon!</h5>
+										<!-- <h5 align="center">Lectures occured during MIT IAP 2021. All lectures, slides, and labs are now available!</h5> -->
 		    <br>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -286,9 +288,9 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 1</h6>
-										<i>Feb. 05, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=5tvmMX8r_OM&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>]</p> -->
+										<i>Jan. 24, 2022</i>
+                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=5tvmMX8r_OM&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 1 -->
@@ -312,9 +314,9 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 2</h6>
-										<i>Feb. 12, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=qjrad0V0uJE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>Feb 12, 2020</i></p> -->
+										<i>Jan. 24, 2022</i>
+                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=qjrad0V0uJE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 2 -->
@@ -340,8 +342,8 @@
                   <div class="col-md-12">
                     <h6 class="card-title">Software Lab 1</h6>
 										<!-- <i>Due Jan. 26, 2021</i> -->
-										<p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p>
-										<!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p> -->
+										<p>[<b>Code</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lab 1 -->
@@ -371,9 +373,9 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 3</h6>
-										<i>Feb. 19, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=AjtX1N_VT9E&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=3'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<i>Jan. 25, 2022</i>
+                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=AjtX1N_VT9E&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=3'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 3 -->
@@ -398,9 +400,9 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 4</h6>
-										<i>Feb. 26, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BUNl0To1IVw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<i>Jan. 25, 2022</i>
+                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BUNl0To1IVw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 4 -->
@@ -426,8 +428,8 @@
                   <div class="col-md-12">
                     <h6 class="card-title">Software Lab 2</h6>
 										<!-- <i>Mar. 05, 2021</i> -->
-                    <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p>
-										<!-- <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<b>Code</b>] <i>coming soon!</i></p> -->
+                    <!-- <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>]</p> -->
+										<p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<b>Code</b>] <i>coming soon!</i></p>
 
                   </div>
                 </div>
@@ -458,9 +460,9 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 5</h6>
-										<i>Mar. 05, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=93M1l_nrhpQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<i>Jan. 26, 2022</i>
+                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=93M1l_nrhpQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 5 -->
@@ -485,163 +487,14 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 6</h6>
-										<i>Mar. 12, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=-boCMDouF2g&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<i>Jan. 26, 2022</i>
+                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=-boCMDouF2g&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 6 -->
 
               <!-- Lab 3 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/Lab3.gif" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Pixels-to-Control Learning</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Software Lab 3</h6>
-										<!-- <i>Due Jan. 26, 2021</i> -->
-                    <p> [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] </p>
-										<!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Lab 3 -->
-
-            </div> <!-- end of Day 3 -->
-
-
-
-
-            <!-- Hot Topics -->
-            <div class="row">
-              <!-- Hop Topic 1 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/dice.gif" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Evidential Deep Learning</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Lecture 7</h6>
-										<i>Mar. 19, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=toTcf7tZK8c&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Hop Topic 1 -->
-
-              <!-- Hop Topic 2 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/bias.gif" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-											<h5 class="card-title"><highlight>Bias and Fairness</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Lecture 8</h6>
-										<i>Mar. 26, 2021</i>
-                    <p>[<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=wmyVODy_WD8&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8'>Video</a>] </p>
-										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Hop Topic 2 -->
-
-              <!-- Project Proposal -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/chalk.jpg" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Project Proposals</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-										<h6 class="card-title">Work on Final Proposals</h6>
-										<!-- <i>Due Jan. 27, 2021</i> -->
-                    <!-- <p>[<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] [<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] </p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Project Proposal -->
-
-            </div> <!-- end of Hot Topics -->
-
-
-
-            <!-- Day 4 -->
-            <div class="row">
-              <!-- Lecture 7 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/document.gif" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Learning for Information Extraction</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Lecture 9</h6>
-										<i>Apr. 02, 2021</i>
-										<!-- <p>[<a data-toggle="modal" data-target="#EY_modal">Info</a>] -->
-										<!-- [<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=4PuuziOgSU4&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>]</p> -->
-										<p>[<a data-toggle="modal" data-target="#EY_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=WkUYsVC3hKI&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>] </p>
-											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Lecture 7 -->
-
-              <!-- Lecture 8 -->
               <div class="col-md-4">
                 <div class="row">
                   <div class="col-md-2 v-center">
@@ -654,17 +507,81 @@
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Taming Dataset Bias</highlight></h5>
+                      <h5 class="card-title"><highlight>Learning End-to-End Self-Driving Control</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 3</h6>
+										<!-- <i>Due Jan. 26, 2021</i> -->
+                    <!-- <p> [<a href='https://github.com/aamini/introtodeeplearning/'>Code</a>] </p> -->
+										<p>[<b>Code</b>] <i>coming soon!</i></p>
+                  </div>
+                </div>
+              </div> <!-- end of Lab 3 -->
+
+            </div> <!-- end of Day 3 -->
+
+
+
+
+
+            <!-- Day 4 -->
+            <div class="row">
+              <!-- Lecture 7 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/mystery1.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 9</h6>
+										<i>Jan. 27, 2022</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#EY_modal">Info</a>] -->
+										<!-- [<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=4PuuziOgSU4&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>]</p> -->
+										<!-- <p>[<a data-toggle="modal" data-target="#EY_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=WkUYsVC3hKI&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 7 -->
+
+              <!-- Lecture 8 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="images/thumb/mystery2.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 10</h6>
-										<i>Apr. 09, 2021</i>
+										<i>Jan. 27, 2022</i>
                     <!-- <p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=8Kn4Gi8iSYQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8'>Video</a>]</p> -->
-										<p>[<a data-toggle="modal" data-target="#ibm_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=eS-OHAHOqU0&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>] </p>
-											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<a data-toggle="modal" data-target="#ibm_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=eS-OHAHOqU0&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 8 -->
@@ -688,7 +605,7 @@
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
-                    <h6 class="card-title">Paper review</h6>
+                    <h6 class="card-title">Work on final projects</h6>
 										<!-- <i>Due Jan. 28, 2021</i> -->
                     <p></p>
                   </div>
@@ -705,24 +622,24 @@
                   <div class="col-md-2 v-center">
                     <div class="card card-lecture">
                       <div class="card-icon">
-                        <img src="images/thumb/L9.gif" alt="">
+                        <img src="images/thumb/mystery3.jpg" alt="">
                       </div>
                     </div>
                   </div>
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Towards AI for 3D Content Creation</highlight></h5>
+                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 11</h6>
-										<i>Apr. 16, 2021</i>
+										<i>Jan. 28, 2022</i>
                     <!-- <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
-										<p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>][<a href='https://www.youtube.com/watch?v=lkkFcg9k9ho&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=11'>Video</a>] </p>
-											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>][<a href='https://www.youtube.com/watch?v=lkkFcg9k9ho&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=11'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 9 -->
@@ -733,7 +650,7 @@
                   <div class="col-md-2 v-center">
                     <div class="card card-lecture">
                       <div class="card-icon">
-                        <img src="images/thumb/health.gif" alt="">
+                        <img src="images/thumb/mystery4.jpg" alt="">
                         <!-- <img src="images/thumb/mystery4.jpg" alt=""> -->
                       </div>
                     </div>
@@ -741,105 +658,20 @@
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>AI in Healthcare</highlight></h5>
+                      <h5 class="card-title"><highlight>Guest Lecture</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 12</h6>
-										<i>Apr. 23, 2021</i>
+										<i>Jan. 28, 2022</i>
                     <!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L10.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=Z5Pw5eWItiw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>]</p> -->
-										<p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=cvXVK8oqU4Q&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=12'>Video</a>] </p>
-											<!-- [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=cvXVK8oqU4Q&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=12'>Video</a>] </p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 10 -->
-
-              <!-- Lab 5 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/work.jpg" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Final Project</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Work on Final Projects</h6>
-<!--                     <p>[Video] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Lab 5 -->
-
-            </div> <!-- end of Day 5 -->
-
-
-						<!-- Day 5 -->
-            <div class="row">
-              <!-- Lecture 9 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/present.jpg" alt="">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Project Presentations</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Project Pitches</h6>
-										<!-- <i>Jan. 29, 2021</i> -->
-                    <!-- <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
-										<!-- <p>[<b>Video</b>] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Lecture 9 -->
-
-              <!-- Lecture 10 -->
-              <div class="col-md-4">
-                <div class="row">
-                  <div class="col-md-2 v-center">
-                    <div class="card card-lecture">
-                      <div class="card-icon">
-                        <img src="images/thumb/present.jpg" alt="">
-                        <!-- <img src="images/thumb/mystery4.jpg" alt=""> -->
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-1"></div>
-                  <div class="col-md-8 v-center">
-                    <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Project Presentations</highlight></h5>
-                    </div>
-                  </div>
-                </div>
-                <div class="row card-lecture">
-                  <div class="col-md-12">
-                    <h6 class="card-title">Project Pitches</h6>
-										<!-- <i>Jan. 29, 2021</i> -->
-                    <!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L10.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=Z5Pw5eWItiw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>]</p> -->
-										<!-- <p>[<b>Video</b>] <i>coming soon!</i></p> -->
-                  </div>
-                </div>
-              </div> <!-- end of Project Presentations 2 -->
 
               <!-- Lab 5 -->
               <div class="col-md-4">
@@ -854,20 +686,20 @@
                   <div class="col-md-1"></div>
                   <div class="col-md-8 v-center">
                     <div class="card card-lecture">
-                      <h5 class="card-title"><highlight>Awards Ceremony</highlight></h5>
+                      <h5 class="card-title"><highlight>Project Competition</highlight></h5>
                     </div>
                   </div>
                 </div>
                 <div class="row card-lecture">
                   <div class="col-md-12">
-                    <h6 class="card-title">Winners announced!</h6>
-										<!-- <i>Jan. 29, 2021</i> -->
+                    <h6 class="card-title">Project pitches and final awards!</h6>
 <!--                     <p>[Video] <i>coming soon!</i></p> -->
                   </div>
                 </div>
-              </div> <!-- end of Awards -->
+              </div> <!-- end of Lab 5 -->
 
-            </div> <!-- end of Project Day -->
+            </div> <!-- end of Day 5 -->
+
 
         </div> <!-- end of container -->
     </div> <!-- end of tabs -->
@@ -958,9 +790,10 @@
                     <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
                       data-parent="#accordionEx">
                       <div class="card-body">
-                        <!-- Registration opens on Dec 1, 2020 at 9am. If you are an MIT student (student, postdoc, or faculty) please <a href="https://student.mit.edu/cgi-bin/sfprwtrm.sh">register here</a> after registration opens. You can specify if you want to take the course for credit or as a listener there. -->
-                        If you are an MIT student please <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">register here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 6 units when prompted. You can also specify if you want to be registered as a listener or regular student there.
-												After the MIT course, the course will be made publically available to non-MIT affiliates as well. Please sign up for the mailing list to receive updates when this occurs.
+                        Registration opens on Dec 1, 2021 at 9am. If you are an MIT student please <a href="https://student.mit.edu/cgi-bin/sfprwtrm.sh">register here</a> after registration opens. You can specify if you want to take the course for credit or as a listener there.
+                        <!-- If you are an MIT student please <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">register here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 6 units when prompted. You can also specify if you want to be registered as a listener or regular student there. -->
+												<br><br>All other MIT affiliates (postdocs, faculty, staff, etc) are very welcome to attend and participate in the course. Please sign up for the <a href="http://eepurl.com/gQJo2D">mailing list</a> to receive updates.
+												<br><br>After the MIT course, the course will be made publically available to non-MIT affiliates as well. Again, please sign up for the <a href="http://eepurl.com/gQJo2D">mailing list</a> to receive updates when this occurs.
                         <!-- If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>. -->
                       </div>
                     </div>
@@ -1009,8 +842,7 @@
                       data-parent="#accordionEx">
                       <div class="card-body">
                         <p>
-													<!-- If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>. -->
-													If you would like to receive course related updates and lecture materials please subscribe to our <a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg">YouTube channel</a>.
+													If you would like to receive course related updates and lecture materials please subscribe to our <a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg">YouTube channel</a> and sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>.
                         </p>
                       </div>
                     </div>
@@ -1116,7 +948,7 @@
                       data-parent="#accordionEx2">
                       <div class="card-body">
                         <p>
-                          This class would not be possible without our amazing sponsors and has been sponsored by Google, IBM, NVIDIA, Ernst and Young, LambdaLabs and Onepanel. If you are interesting in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b>.
+                          This class would not be possible without our amazing sponsors and has been sponsored by Google, IBM, NVIDIA, Ernst and Young, LambdaLabs, Tencent AI, Microsoft, Amazon, and Onepanel. If you are interesting in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b>.
                         </p>
                       </div>
                     </div>
@@ -1140,7 +972,7 @@
                       data-parent="#accordionEx2">
                       <div class="card-body">
                         <p>
-                          To view archived versions of this website from past years please click here for <a href="./2020/index.html">2020</a>, <a href="./2019/index.html">2019</a>, <a href="./2018/index.html">2018</a>, and <a href="./2017/index.html">2017</a>.
+                          To view archived versions of this website from past years please click here for <a href="./2021/index.html">2021</a>, <a href="./2020/index.html">2020</a>, <a href="./2019/index.html">2019</a>, <a href="./2018/index.html">2018</a>, and <a href="./2017/index.html">2017</a>.
                         </p>
                       </div>
                     </div>
@@ -1382,7 +1214,7 @@
                   </div>
                   <h5>This class and delivery would not be possible without our amazing sponsors! If you are interesting in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b></h5>
                   <br>
-                  <img class="img-fluid" src="images/sponsor_logos_background_2021.png?v=6" alt="">
+                  <img class="img-fluid" src="images/sponsor_logos_background_2022.png?v=1" alt="">
 
                 </div>
             </div> <!-- end of row -->
