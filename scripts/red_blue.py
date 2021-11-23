@@ -20,7 +20,7 @@ from PIL import Image, ImageTk
 # Camera: CamNet Webcam
 
 
-# REAL LECTURE 1: 
+# REAL LECTURE 1:
 # https://mit.zoom.us/j/97105519647
 
 
@@ -30,8 +30,8 @@ from PIL import Image, ImageTk
 # path_screen_file = "/home/amini/Downloads/techcrunch.mkv"
 # path_webcam_file = "/home/amini/Downloads/1_Webcam_1_clip.mp4"
 # path_screen_file = "/home/amini/Downloads/2_Screen_2_clip.mp4"
-path_webcam_file = "/home/amini/6.S191_STREAM/L1/1_Webcam_Clip_Final_1.mp4"
-path_screen_file = "/home/amini/6.S191_STREAM/L1/2_Screen_Clip_Final_1.mp4"
+path_webcam_file = "/home/amini/6.S191_STREAM/L7_L8/1_Webcam_Clip_TOTAL.mp4"
+path_screen_file = "/home/amini/6.S191_STREAM/L7_L8/2_Screen_Clip_TOTAL.mp4"
 
 
 
