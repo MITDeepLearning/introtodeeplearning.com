@@ -122,6 +122,19 @@
 			var registrationMIT = "";
 			var registrationPublic = "";
 
+			function DeltaDateToString(deltaDate) {
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(deltaDate / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((deltaDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((deltaDate % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((deltaDate % (1000 * 60)) / 1000);
+				return days + "d "
+					 	+ hours + "h "
+						+ minutes + "m "
+						+ seconds + "s ";
+			}
+
+
 			// Update the count down every 1 second
 			var x = setInterval(function() {
 
@@ -132,41 +145,63 @@
         var registrationDistance = registrationDate - now;
 
         var registrationCounter = "";
-				if (registrationDistance > 0) {
+				var publishCountdown = true;
+				if (publishCountdown) {
+					var firstLectureDate = new Date("March 11, 2022 10:00:00 GMT-05:00").getTime();
+					var numLectures = 5;
+					let nextLectureDate = new Date(firstLectureDate.valueOf())
 
-				  // Time calculations for days, hours, minutes and seconds
-				  var days = Math.floor(registrationDistance / (1000 * 60 * 60 * 24));
-				  var hours = Math.floor((registrationDistance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				  var minutes = Math.floor((registrationDistance % (1000 * 60 * 60)) / (1000 * 60));
-				  var seconds = Math.floor((registrationDistance % (1000 * 60)) / 1000);
+					var lectureNumber = 1;
+					while ((nextLectureDate < now) && (lectureNumber < numLectures)) {
+						nextLectureDate.setTime(nextLectureDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+						lectureNumber += 1;
+						// alert("lecture: "+lectureNumber+" in "+DeltaDateToString(nextLectureDate-now));
+					}
 
-				  // Display the result in the element with id="demo"
-				  registrationCounter = "<h3>2022 New lecture coming in!</h3>"
-						+ "<h3><highlight>"
-						+ days + "d "
-						+ hours + "h "
-						+ minutes + "m "
-						+ seconds + "s "
-						+"</highlight></h3>";
-				   registrationCounter 
+					// alert("done");
+					registrationCounter = "<h3>2022 IAP Lectures Open Now!</h3>"
+						+ "<h4>Next lecture: <highlight>"
+						+ DeltaDateToString(registrationDistance)
+						+"</highlight></h4>";
+
+
+					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+					var lecButton = '<a class="btn-solid-reg" href="https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-play"></i><emsp> Watch</h4><h6>lecture videos</h6></a>';
+					var subButton = '<a class="btn-solid-reg" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe</h4><h6>for updates</h6></a>';
+					document.getElementById("registration").innerHTML = registrationCounter + lecButton + "&emsp;" + subButton;
+
 
 				} else {
-				// If the count down is finished, write some text
-			    clearInterval(x);
-					// registrationCounter = "<h3><highlight>Registration is now open to all!!</highlight></h3>";
-					registrationCounter = "<h3>MIT IAP 2022 completed!</h3>"
-					registrationHeader = "<h4>Register and signup here!</h4>";
-					registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';  // https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm  //https://student.mit.edu/cgi-bin/sfprwtrm.sh
-					registrationPublic = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> Everyone</h4>All: Public and MIT students</a> &nbsp';
-					mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
-            // registrationCounter = "<h3>Course lectures are now LIVE!</h3>"
-  					// 	+ '<br><a class="btn-solid-reg page-scroll" href="#schedule"><i class="fas fa-graduation-cap"></i><emsp> SCHEDULE</a> &nbsp';
-			  }
 
-        // var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
-        var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe for<br>Updates</h4></a>';
-//         document.getElementById("registration").innerHTML = registrationCounter + registrationHeader + registrationPublic;
-        document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
+					if (registrationDistance > 0) {
+
+
+					  // Display the result in the element with id="demo"
+					  registrationCounter = "<h3>2022 Registration opens in:</h3>"
+							+ "<h3><highlight>"
+							+ DeltaDateToString(registrationDistance)
+							+"</highlight></h3>";
+					   registrationCounter
+
+					} else {
+					// If the count down is finished, write some text
+				    clearInterval(x);
+						// registrationCounter = "<h3><highlight>Registration is now open to all!!</highlight></h3>";
+						registrationCounter = "<h3>MIT IAP 2022 completed!</h3>"
+						registrationHeader = "<h4>Register and signup here!</h4>";
+						registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';  // https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm  //https://student.mit.edu/cgi-bin/sfprwtrm.sh
+						registrationPublic = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> Everyone</h4>All: Public and MIT students</a> &nbsp';
+						mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
+	            // registrationCounter = "<h3>Course lectures are now LIVE!</h3>"
+	  					// 	+ '<br><a class="btn-solid-reg page-scroll" href="#schedule"><i class="fas fa-graduation-cap"></i><emsp> SCHEDULE</a> &nbsp';
+				  }
+					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+					var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe for<br>Updates</h4></a>';
+	//         document.getElementById("registration").innerHTML = registrationCounter + registrationHeader + registrationPublic;
+					document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
+
+				}
+
 			}, 1000);
 		</script>
 
@@ -316,8 +351,8 @@
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 2</h6>
 										<i>Mar. 18, 2022</i>
-                    <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=qjrad0V0uJE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p> -->
-										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=QvkQ1B3FBqA&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p>
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
                   </div>
                 </div>
               </div> <!-- end of Lecture 2 -->
@@ -1324,14 +1359,14 @@
               <div class="col-md-12 v-center">
                 <h6>Talk Abstract</h6>
                 <p>
-									Mass production is a major challenge for automakers set on delivering safe automated driving. For example, they must consider impaired vision caused by weather, lighting, and other adverse road conditions, including slopes and curvatures from potholes or hills. Innoviz CEO Omer Keilaf will offer an introduction to automotive requirements that carmakers ask for in order to meet their targets. Amir Day, Innoviz director of computer vision, will then match these requirements with accompanying perception software challenges and share experiences from how Innoviz solves them. 
+									Mass production is a major challenge for automakers set on delivering safe automated driving. For example, they must consider impaired vision caused by weather, lighting, and other adverse road conditions, including slopes and curvatures from potholes or hills. Innoviz CEO Omer Keilaf will offer an introduction to automotive requirements that carmakers ask for in order to meet their targets. Amir Day, Innoviz director of computer vision, will then match these requirements with accompanying perception software challenges and share experiences from how Innoviz solves them.
                 </p>
 
                 <h6>Speaker Bio</h6>
                 <p>
-									 <b>Omer Keilaf</b> has spent the greater part of the past two decades driving cutting edge technologies from inception to commercialization. As Co-Founder and CEO of Innoviz Technologies, Omer is working tirelessly to bring safe AVs to consumer markets by delivering high-performance, automotive-grade LiDAR and perception software to automakers at mass market prices. Last year, Keliaf took his company public through a SPAC merger with Collective Growth Corporation, raising over $370 million. Prior to founding Innoviz, Omer served as an officer in the elite IDF intelligence Unit 81, and held senior leadership roles at various companies. Omer holds a BSc and MSc in Electrical Engineering and an MBA, all from Tel Aviv University. 
+									 <b>Omer Keilaf</b> has spent the greater part of the past two decades driving cutting edge technologies from inception to commercialization. As Co-Founder and CEO of Innoviz Technologies, Omer is working tirelessly to bring safe AVs to consumer markets by delivering high-performance, automotive-grade LiDAR and perception software to automakers at mass market prices. Last year, Keliaf took his company public through a SPAC merger with Collective Growth Corporation, raising over $370 million. Prior to founding Innoviz, Omer served as an officer in the elite IDF intelligence Unit 81, and held senior leadership roles at various companies. Omer holds a BSc and MSc in Electrical Engineering and an MBA, all from Tel Aviv University.
 									 <br>
-									 <b>Amir Day</b> is the Director for Computer Vision at Innoviz Technologies. With more than a decade of experience executing complex, multi-disciplinary technology projects from conception to production, Amir's team developed Innoviz's perception software (InnovizAPP) from scratch, focusing on deep learning and software infrastructure as a means to interpret Innoviz's rich point cloud data. Before working at Innoviz, Amir served in the IDF's Military Intelligence Corps, leading a team of 100+ engineers to develop new, novel systems solutions. Today, Amir focuses on 3D Computer Vision, Deep Learning and Data Pipeline for autonomous vehicles perception. 
+									 <b>Amir Day</b> is the Director for Computer Vision at Innoviz Technologies. With more than a decade of experience executing complex, multi-disciplinary technology projects from conception to production, Amir's team developed Innoviz's perception software (InnovizAPP) from scratch, focusing on deep learning and software infrastructure as a means to interpret Innoviz's rich point cloud data. Before working at Innoviz, Amir served in the IDF's Military Intelligence Corps, leading a team of 100+ engineers to develop new, novel systems solutions. Today, Amir focuses on 3D Computer Vision, Deep Learning and Data Pipeline for autonomous vehicles perception.
                 </p>
               </div>
             </div>
