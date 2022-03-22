@@ -148,20 +148,20 @@
 				var publishCountdown = true;
 				if (publishCountdown) {
 					var firstLectureDate = new Date("March 11, 2022 10:00:00 GMT-05:00").getTime();
-					var numLectures = 5;
+					var numLectures = 10;
 					let nextLectureDate = new Date(firstLectureDate.valueOf())
 
 					var lectureNumber = 1;
 					while ((nextLectureDate < now) && (lectureNumber < numLectures)) {
 						nextLectureDate.setTime(nextLectureDate.getTime() + (7 * 24 * 60 * 60 * 1000));
 						lectureNumber += 1;
-						// alert("lecture: "+lectureNumber+" in "+DeltaDateToString(nextLectureDate-now));
+						alert("lecture: "+lectureNumber+" in "+DeltaDateToString(nextLectureDate-now));
 					}
 
 					// alert("done");
 					registrationCounter = "<h3>2022 IAP Lectures Open Now!</h3>"
 						+ "<h4>Next lecture: <highlight>"
-						+ DeltaDateToString(registrationDistance)
+						+ DeltaDateToString(nextLectureDate - now)
 						+"</highlight></h4>";
 
 
