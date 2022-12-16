@@ -861,6 +861,19 @@ input[type='checkbox'] {
 	border-radius: 50%;
 }
 
+.slider-1 .card-image-primary {
+	width: 12rem;
+	height: 12rem;
+	margin-right: auto;
+	margin-bottom: 0.25rem;
+	margin-left: auto;
+	border-radius: 50%;
+  border-color: white;
+  border-width: 3px;
+  border-style: solid;
+  box-shadow: 0px 0px 25px;
+}
+
 .slider-1 .card-body {
 	padding-bottom: 0;
 }
@@ -2201,4 +2214,8 @@ a:hover.back-to-top {
 .card-lecture a {
   color: #00c9db;
   font-weight:bold;
+}
+
+.text-center {
+  text-align: center;
 }
