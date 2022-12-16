@@ -2215,3 +2215,7 @@ a:hover.back-to-top {
   color: #00c9db;
   font-weight:bold;
 }
+
+.text-center {
+  text-align: center;
+}

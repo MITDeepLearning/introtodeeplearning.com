@@ -119,7 +119,7 @@
 
     <script>
 			// Set the date we're counting down to
-      var registrationDate = new Date("March 18, 2022 10:00:00 GMT-05:00").getTime();
+      var registrationDate = new Date("January 01, 2023 12:00:00 GMT-05:00").getTime();
 			var registrationHeader = "";
 			var registrationMIT = "";
 			var registrationPublic = "";
@@ -147,7 +147,7 @@
         var registrationDistance = registrationDate - now;
 
         var registrationCounter = "";
-				var publishCountdown = true;
+				var publishCountdown = false;
 				if (publishCountdown) {
 					var firstLectureDate = new Date("March 12, 2022 10:00:00 GMT-05:00").getTime();
 					var numLectures = 12;
@@ -179,7 +179,7 @@
 
 
 					  // Display the result in the element with id="demo"
-					  registrationCounter = "<h3>2022 Registration opens in:</h3>"
+					  registrationCounter = "<h3>Lottery is now open! Signup today!</h3>"
 							+ "<h3><highlight>"
 							+ DeltaDateToString(registrationDistance)
 							+"</highlight></h3>";
@@ -198,7 +198,8 @@
 	  					// 	+ '<br><a class="btn-solid-reg page-scroll" href="#schedule"><i class="fas fa-graduation-cap"></i><emsp> SCHEDULE</a> &nbsp';
 				  }
 					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
-					var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe for<br>Updates</h4></a>';
+					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe for<br>Updates</h4></a>';
+					var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> ONLINE<br>REGISTRATION</h4></a>';
 	//         document.getElementById("registration").innerHTML = registrationCounter + registrationHeader + registrationPublic;
 					document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
 
@@ -217,7 +218,6 @@
                             <h1><highlight>MIT 6.S191</highlight></h1>
                             <h1>Introduction to<br>Deep Learning</h1>
                             <h5>MIT's introductory course on deep learning methods with applications in <span id="js-rotating">computer vision, robotics, medicine, language, game play, art</span>, and more!</h5>
-														<h6>Designed to teach you deep learning <highlight>as quickly as possible</highlight>!</h6>
                         </div>
                     </div> <!-- end of col -->
 
@@ -228,8 +228,8 @@
                           <!-- Video Preview -->
                           <div class="image-container">
                               <div class="video-wrapper">
-                                  <a class="popup-youtube" href="https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1" data-effect="fadeIn">
-                                  <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=_f-W98_WHHc" data-effect="fadeIn"> -->
+                                  <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1" data-effect="fadeIn"> -->
+                                  <a class="popup-youtube" href="https://www.youtube.com/watch?v=_f-W98_WHHc" data-effect="fadeIn">
 
                                       <img class="img-fluid" src="images/video-frame.jpg" alt="alternative">
                                       <span class="video-play-button">
@@ -276,19 +276,22 @@
 
             <div class="col-lg-4">
 							<div class="text-container">
-                <h2>Time and Location</h2>
-								<h5 style="text-align:center"><highlight>New <i>bootcamp</i> edition of 6.S191 coming in 2023!</highlight></h5>
-								<h6 style="text-align:center"><highlight>Location</highlight>: MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></h6>
-								<!-- <h6 style="text-align:center">Mon Jan 23 @ 12 - 9pm ET</h6>
-								<h6 style="text-align:center">Wed Jan 25 @ 12 - 6pm ET</h6>
-								<h6 style="text-align:center">Fri Jan 27 @ 12 - 3pm ET</h6> -->
-                <h6 style="text-align:center">
-										<!-- 1:00pm - 4:00pm EST Everyday</b><br><br> -->
-                  Mon Jan 23 @ <highlight>12 - 8pm</highlight> EST<br>
-                  Wed Jan 25 @ <highlight>12 - 3pm</highlight> EST<br>
-                	Fri Jan 27 @ <highlight>12 - 3pm</highlight> EST<br>
-                </h6>
-								<h6 style="text-align:center"><highlight>Food provided every day!</highlight></h6>
+								<h2>Time and Location</h2>
+                <h5 class="text-center">
+									<highlight>Mon Jan 9 - Fri Jan 13, 2023</highlight><br>
+									2pm - 5pm EST Everyday
+								</h5>
+                <p class="text-center">
+                  2:00pm-2:45pm: Lecture Part 1<br>
+                  2:45pm-3:30pm: Lecture Part 2<br>
+                  3:30pm-5:00pm: Software Labs
+                </p>
+								<h5 class="text-center">
+									<highlight>MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></highlight><br>
+									New competitions &  prizes!
+								<h5>
+
+
 
               </div>
             </div>  <!-- end col-lg-4  -->
@@ -307,7 +310,7 @@
                     <h2>Course Schedule</h2>
 										<h5 align="center">
 											<!-- New <highlight>lectures, slides, and labs</highlight> will be open-sourced every week starting <highlight>March 11 at 10AM ET</highlight>! -->
-											New <highlight>lectures, slides, and labs</highlight> coming soon! <highlight>January 23, 2023</highlight>!
+											New <highlight>lectures, slides, and labs</highlight> coming soon @ MIT! <highlight>January 9, 2023</highlight>!
 										</h5>
 		    <br>
                 </div> <!-- end of col -->
@@ -336,7 +339,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 1</h6>
-										<!-- <i>Mar. 11, 2022</i> -->
+										<i>Jan. 9, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI'>Video</a>] </p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
@@ -362,7 +365,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 2</h6>
-										<!-- <i>Mar. 18, 2022</i> -->
+										<i>Jan. 9, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=QvkQ1B3FBqA&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
@@ -420,7 +423,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 3</h6>
-										<!-- <i>Mar. 25, 2022</i> -->
+										<i>Jan. 10, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=uapdILWYTzE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4'>Video</a>] </p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
@@ -447,7 +450,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 4</h6>
-										<!-- <i>Apr. 1, 2022</i> -->
+										<i>Jan. 10, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=QcLlc9lj2hk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=5'>Video</a>] </p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
@@ -506,7 +509,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 5</h6>
-										<!-- <i>Apr. 8, 2022</i> -->
+										<i>Jan. 11, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=-WbN61qtTGQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=5'>Video</a>] </p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
@@ -533,7 +536,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 6</h6>
-										<!-- <i>Apr. 15, 2022</i> -->
+										<i>Jan. 11, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=wySXLRTxAGQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>] </p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
@@ -594,7 +597,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 7</h6>
-										<!-- <i>Apr. 22, 2022</i> -->
+										<i>Jan. 12, 2023</i>
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#innoviz_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=NHZMfSMAHlo&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>] </p> -->
 										<!-- <p>[<a data-toggle="modal" data-target="#innoviz_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
@@ -623,7 +626,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 8</h6>
-										<!-- <i>Apr 29, 2022</i> -->
+										<i>Jan. 12, 2023</i>
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#rev_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=sR6_bZ6VkAg&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8'>Video</a>] </p> -->
 										<!-- <p>[<a data-toggle="modal" data-target="#rev_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
@@ -681,7 +684,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 9</h6>
-										<!-- <i>May 13, 2022</i> -->
+										<i>Jan. 13, 2023</i>
                     <!-- <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>][<a href='https://www.youtube.com/watch?v=QZxcTZj0L-M&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>] </p> -->
@@ -710,7 +713,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 10</h6>
-										<!-- <i>May 28, 2022</i> -->
+										<i>Jan. 13, 2023</i>
 										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=veYq6EWZyVc&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>] </p> -->
  										<!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
@@ -1078,13 +1081,13 @@
               </div>
               <div class="col-lg-4">
                   <div class="card card-center">
-                      <img class="card-image-primary" src="images/people/asolei.jpg" alt="asolei">
+                      <img class="card-image-primary" src="images/people/avaamini_blue.jpg" alt="avaamini">
                       <div class="card-body">
                         <p class="testimonial-author">Ava Amini</p>
                         <p class="testimonial-text">Lead Instructor<br>Organizer</p>
 
 												<span class="fa-stack">
-                            <a href="https://www.mit.edu/~asolei">
+                            <a href="https://www.avaamini.com">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fas fa-globe fa-stack-1x"></i>
                             </a>
@@ -1296,7 +1299,7 @@
                   <div class="title">
                     <h2>Sponsors</h2>
                   </div>
-                  <h5>This class and delivery would not be possible without our amazing sponsors! If you are interesting in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b></h5>
+                  <h5>This class and delivery would not be possible without our amazing sponsors! If you are interested in becoming involved in this course as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b></h5>
                   <br>
                   <img class="img-fluid" src="images/sponsor_logos_background_2022_v3.png" alt="">
 
