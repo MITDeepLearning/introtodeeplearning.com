@@ -34,7 +34,7 @@ pdf.set_author("A. Amini, A. Soleimany. MIT 6.S191")
 pdf.set_margins(0, 0, 0)
 
 # imagelist is the list with all image filenames
-files = sorted(glob.glob(os.path.join(args.input, "*.jpg")))
+files = sorted(glob.glob(os.path.join(args.input, "*.jpeg")))
 files.sort(key=lambda var:[int(x) if x.isdigit() else x for x in re.findall(r'[^0-9]|[0-9]+', var)])
 import pdb; pdb.set_trace()
 for image in tqdm(files):
