@@ -147,10 +147,10 @@
         var registrationDistance = registrationDate - now;
 
         var registrationCounter = "";
-				var publishCountdown = false;
+				var publishCountdown = true;
 				if (publishCountdown) {
-					var firstLectureDate = new Date("March 12, 2022 10:00:00 GMT-05:00").getTime();
-					var numLectures = 12;
+					var firstLectureDate = new Date("March 10, 2023 10:00:00 GMT-05:00").getTime();
+					var numLectures = 10;
 					let nextLectureDate = new Date(firstLectureDate.valueOf())
 
 					var lectureNumber = 1;
@@ -161,16 +161,17 @@
 					}
 
 					// alert("done");
-					registrationCounter = "<h3>2022 IAP Lectures Open Now!</h3>"
-						// + "<h4>Next lecture: <highlight>"
-						// + DeltaDateToString(nextLectureDate - now)
-						+"</highlight></h4>";
+					registrationCounter = "<h3><highlight>2023 Edition is LIVE!</highlight></h3>"
+						+ "<h4>New Lecture Premiere: </h4><h3><highlight>"
+						+ DeltaDateToString(nextLectureDate - now)
+						+"</highlight></h3>";
 
 
 					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
 					var lecButton = '<a class="btn-solid-reg" href="https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-play"></i><emsp> Watch</h4><h6>lecture videos</h6></a>';
-					var subButton = '<a class="btn-solid-reg" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe</h4><h6>for updates</h6></a>';
-					document.getElementById("registration").innerHTML = registrationCounter + lecButton + "&emsp;" + subButton;
+					var subButton = '<a class="btn-solid-reg" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe<br>for updates</h4></a>';
+					// document.getElementById("registration").innerHTML = registrationCounter + lecButton + "&emsp;" + subButton;
+					document.getElementById("registration").innerHTML = registrationCounter + "&emsp;" + subButton;
 
 
 				} else {
@@ -279,7 +280,7 @@
             <div class="col-lg-4">
 							<div class="text-container">
 								<h2>Time and Location</h2>
-                <h5 class="text-center">
+                <!-- <h5 class="text-center">
 									<highlight>Mon Jan 9 - Fri Jan 13, 2023</highlight><br>
 									2pm - 5pm EST Everyday
 								</h5>
@@ -291,6 +292,21 @@
 								<h5 class="text-center">
 									<highlight>MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></highlight><br>
 									New competitions &  prizes!
+								<h5> -->
+
+								<h5 class="text-center">
+									<highlight>Fri Mar 10 - Fri May 12, 2023</highlight><br>
+									Every Friday at 10am ET<br>
+									Every week!
+								</h5>
+
+								<p class="text-center">
+									The 2023 in-person edition has completed during MIT IAP 2023 and was held in MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a>. The online edition of the course is now live on Friday at 10am ET, every week! <a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><highlight>Subscribe here</highlight></a> to be notified when a new lecture is released!
+								</p>
+
+								<h5 class="text-center">
+									<!-- <highlight>MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></highlight><br> -->
+									<highlight>New lectures, competitions, &  prizes!</highlight>
 								<h5>
 
 
@@ -312,7 +328,7 @@
                     <h2>Schedule</h2>
 										<h5 align="center">
 											<!-- New <highlight>lectures, slides, and labs</highlight> will be open-sourced every week starting <highlight>March 11 at 10AM ET</highlight>! -->
-											New <highlight>lectures, slides, and labs</highlight> coming soon @ MIT! <highlight>January 9, 2023</highlight>!
+											New <highlight>2023 edition</highlight> lectures, slides, and labs! <highlight>Every Friday at 10am ET</highlight>!
 										</h5>
 		    <br>
                 </div> <!-- end of col -->
@@ -341,9 +357,10 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 1</h6>
-										<i>Jan. 9, 2023</i>
+										<i>Mar. 10, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI'>Video</a>] </p> -->
-										<p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 1 -->
@@ -367,9 +384,10 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 2</h6>
-										<i>Jan. 9, 2023</i>
+										<i>Mar. 17, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=QvkQ1B3FBqA&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p> -->
-										<p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 2 -->
@@ -425,9 +443,10 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 3</h6>
-										<i>Jan. 10, 2023</i>
+										<i>Mar. 24, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=uapdILWYTzE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4'>Video</a>] </p> -->
-										<p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 3 -->
@@ -452,9 +471,10 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 4</h6>
-										<i>Jan. 10, 2023</i>
+										<i>Mar. 31, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=QcLlc9lj2hk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=5'>Video</a>] </p> -->
-										<p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 4 -->
@@ -513,8 +533,10 @@
 								<div class="row card-lecture">
 									<div class="col-md-12">
 										<h6 class="card-title">Lecture 5</h6>
-										<i>Jan. 11, 2023</i>
-										<p>[<a data-toggle="modal" data-target="#themis_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<i>Apr. 7, 2023</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#themis_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<a data-toggle="modal" data-target="#themis_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
+
 										<!-- <p>[<a data-toggle="modal" data-target="#innoviz_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=NHZMfSMAHlo&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>] </p> -->
 										<!-- <p>[<a data-toggle="modal" data-target="#innoviz_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
 									</div>
@@ -542,9 +564,10 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 6</h6>
-										<i>Jan. 11, 2023</i>
+										<i>Apr. 14, 2023</i>
                     <!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=-WbN61qtTGQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=5'>Video</a>] </p> -->
-										<p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
                   </div>
                 </div>
               </div> <!-- end of Lecture 6 -->
@@ -604,9 +627,10 @@
 								<div class="row card-lecture">
 									<div class="col-md-12">
 										<h6 class="card-title">Lecture 7</h6>
-										<i>Jan. 12, 2023</i>
+										<i>Apr. 21, 2023</i>
 										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=wySXLRTxAGQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7'>Video</a>] </p> -->
-										<p>[<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L7.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 									</div>
 								</div>
 							</div> <!-- end of Lecture 7 -->
@@ -632,8 +656,9 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 8</h6>
-										<i>Jan. 12, 2023</i>
-										<p>[<a data-toggle="modal" data-target="#vanguard_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p>
+										<i>Apr. 28, 2023</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#vanguard_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<a data-toggle="modal" data-target="#vanguard_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#rev_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=sR6_bZ6VkAg&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8'>Video</a>] </p> -->
 										<!-- <p>[<a data-toggle="modal" data-target="#rev_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
                   </div>
@@ -690,7 +715,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 9</h6>
-										<i>Jan. 13, 2023</i>
+										<i>May. 5, 2023</i>
                     <!-- <p>[<a data-toggle="modal" data-target="#lambda_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
 										<p>[<a data-toggle="modal" data-target="#daniela_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#nvidia_modal">Info</a>][<a href='https://www.youtube.com/watch?v=QZxcTZj0L-M&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>] </p> -->
@@ -719,7 +744,7 @@
                 <div class="row card-lecture">
                   <div class="col-md-12">
                     <h6 class="card-title">Lecture 10</h6>
-										<i>Jan. 13, 2023</i>
+										<i>May. 12, 2023</i>
 										<p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>
 										<!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=veYq6EWZyVc&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>] </p> -->
  										<!-- <p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
