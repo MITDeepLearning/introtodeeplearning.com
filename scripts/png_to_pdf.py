@@ -10,6 +10,7 @@ import numpy as np
 parser = argparse.ArgumentParser()
 parser.add_argument("-i", "--input", help="input directory with pngs")
 parser.add_argument("-o", "--output", help="output pdf file")
+parser.add_argument("--no-watermark", action='store_true', help="dont include a watermark")
 args = parser.parse_args()
 
 # def get_most_common_color(img):
@@ -40,6 +41,7 @@ import pdb; pdb.set_trace()
 for image in tqdm(files):
     pdf.add_page()
     pdf.image(image, x=0, y=0, w=1280, h=720)
-    pdf.image("watermark.png", x=0, y=0, w=1280, h=720)
+    if not args.no_watermark: 
+        pdf.image("watermark.png", x=0, y=0, w=1280, h=720)
 
 pdf.output(args.output, "F")
