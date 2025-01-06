@@ -31,7 +31,7 @@ args = parser.parse_args()
 #     cv2.imwrite(image+".comp.png", data, [cv2.IMWRITE_PNG_COMPRESSION, 9])
 
 pdf = fpdf.FPDF(format=(1280, 720))
-pdf.set_author("A. Amini, A. Soleimany. MIT 6.S191")
+pdf.set_author("A. Amini, A.P. Amini. MIT 6.S191")
 pdf.set_margins(0, 0, 0)
 
 # imagelist is the list with all image filenames
@@ -41,7 +41,7 @@ import pdb; pdb.set_trace()
 for image in tqdm(files):
     pdf.add_page()
     pdf.image(image, x=0, y=0, w=1280, h=720)
-    if not args.no_watermark: 
+    if not args.no_watermark:
         pdf.image("watermark.png", x=0, y=0, w=1280, h=720)
 
 pdf.output(args.output, "F")
