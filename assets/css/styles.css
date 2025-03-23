@@ -1126,7 +1126,7 @@ input[type='checkbox'] {
 	width: 4.75rem;
 	height: 4.75rem;
 	border-radius: 50%;
-	background: #4eaaff;
+	background: #fff;
 	animation: pulse-border 1500ms ease-out infinite;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
@@ -1143,7 +1143,7 @@ input[type='checkbox'] {
 	width: 4.375rem;
 	height: 4.375rem;
 	border-radius: 50%;
-	background: #4eaaff;
+	background: #fff;
 	transition: all 200ms;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
@@ -1158,7 +1158,7 @@ input[type='checkbox'] {
 	left: 0.25rem;
 	width: 0;
 	height: 0;
-	border-left: 1.625rem solid #fff;
+	border-left: 1.625rem solid #00c9db;
 	border-top: 1rem solid transparent;
 	border-bottom: 1rem solid transparent;
 }
