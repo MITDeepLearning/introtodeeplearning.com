@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7660766370442054"
+     crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28199335-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-28199335-3');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="mit deep learning,deep learning,mit,introduction to deep learning,mit 6.s191,alexander amini,ava amini" />
+    <meta name="author" content="MIT Deep Learning">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+  	<meta property="og:site_name" content="MIT Deep Learning 6.S191" /> <!-- website name -->
+  	<meta property="og:site" content="http://introtodeeplearning.com" /> <!-- website link -->
+  	<meta property="og:title" content="MIT Deep Learning 6.S191"/> <!-- title shown in the actual shared post -->
+  	<meta property="og:description" content="MIT's introductory course on deep learning methods and applications." /> <!-- description shown in the actual shared post -->
+  	<meta property="og:url" content="http://introtodeeplearning.com" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
+
+    <link rel="image_src" href="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta property="og:image" content="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta property="og:image:secure_url" content="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://i.ibb.co/Jm3xHCR/MIT-Deep-Learning.jpg" />
+    <meta name="twitter:description" content="MIT's introductory course on deep learning methods and applications" />
+
+
+    <!-- Website Title -->
+    <title>MIT Deep Learning 6.S191</title>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="assets/css/fontawesome-all.css" rel="stylesheet"> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/swiper.css" rel="stylesheet">
+  	<link href="assets/css/magnific-popup.css" rel="stylesheet">
+  	<link href="assets/css/styles.css?v=2" rel="stylesheet">
+
+  	<!-- Favicon  -->
+    <link rel="icon" href="../images/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+        <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
+
+        <!-- Image Logo -->
+        <a class="navbar-brand logo-image" href="index.html"><img src="../images/logo.svg" alt="MIT 6.S191"></a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#overview">OVERVIEW</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#schedule">SCHEDULE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#team">TEAM</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#faq">F.A.Q.</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link page-scroll" href="#sponsors">SPONSORS</a>
+                </li>-->
+
+            </ul>
+            <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="https://twitter.com/MITDeepLearning">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <script>
+			// Set the date we're counting down to
+      var registrationDate = new Date("January 06, 2025 13:00:00 GMT-04:00").getTime();
+			var registrationHeader = "";
+			var registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://student.mit.edu/cgi-bin/sfprwtrm.sh"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';  // https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm  //https://student.mit.edu/cgi-bin/sfprwtrm.sh
+			var registrationPublic = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> Everyone</h4>All: Public and MIT students</a> &nbsp';
+
+			function DeltaDateToString(deltaDate) {
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(deltaDate / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((deltaDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((deltaDate % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((deltaDate % (1000 * 60)) / 1000);
+				return days + "d "
+					 	+ hours + "h "
+						+ minutes + "m "
+						+ seconds + "s ";
+			}
+
+
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+
+			  // Get todays date and time
+			  var now = new Date().getTime();
+
+			  // Find the distance between now and the count down date
+        var registrationDistance = registrationDate - now;
+
+        var registrationCounter = "";
+				var publishCountdown = false; // true
+				if (publishCountdown) {
+					var firstLectureDate = new Date("March 3, 2025 11:00:00 GMT-04:00").getTime();
+					var numLectures = 10;
+					let nextLectureDate = new Date(firstLectureDate.valueOf())
+
+					var lectureNumber = 1;
+					while ((nextLectureDate < now) && (lectureNumber < numLectures)) {
+						nextLectureDate.setTime(nextLectureDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+						lectureNumber += 1;
+						// alert("lecture: "+lectureNumber+" in "+DeltaDateToString(nextLectureDate-now));
+					}
+
+					// alert("done");
+					registrationCounter = "<h3><highlight>2025 Edition is HERE!</highlight></h3>"
+					       + "<h4>New Lecture Premiere: </h4><h3><highlight>"
+                  + DeltaDateToString(nextLectureDate - now)
+                  +"</highlight></h3>";
+
+
+					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+					var lecButton = '<a class="btn-solid-reg" href="https://www.youtube.com/watch?v=7sB052Pz0sQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-play"></i><emsp> Watch</h4><h6>lecture videos</h6></a>';
+					var subButton = '<a class="btn-solid-reg" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe<br>for updates</h4></a>';
+					// document.getElementById("registration").innerHTML = registrationCounter + lecButton + "&emsp;" + subButton;
+					document.getElementById("registration").innerHTML = registrationCounter + "&emsp;" + subButton;
+
+
+				} else {
+
+					if (registrationDistance > 0) {
+
+
+					  // Display the result in the element with id="demo"
+					  registrationCounter = "<h3>2025 lottery is now open! Signup today!</h3>"
+							+ "<h3><highlight>"
+							+ DeltaDateToString(registrationDistance)
+							+"</highlight></h3>";
+					   registrationCounter
+
+					} else {
+					// If the count down is finished, write some text
+				    clearInterval(x);
+						// registrationCounter = "<h3><highlight>Registration is now open to all!!</highlight></h3>";
+						registrationCounter = ""; //"<h3>MIT IAP 2024 now live!</h3>"
+						registrationHeader = "<h4>Register and signup here!</h4>";
+						mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
+            // registrationCounter = "<h3>Course lectures are now LIVE!</h3>"
+            // 	+ '<br><a class="btn-solid-reg page-scroll" href="#schedule"><i class="fas fa-graduation-cap"></i><emsp> SCHEDULE</a> &nbsp';
+				  }
+					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
+					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe for<br>Updates</h4></a>';
+					var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> ONLINE<br>REGISTRATION</h4></a>';
+					var piazzaBtn = '<a class="btn-solid-reg page-scroll" href="https://piazza.com/mit/spring2023/6s191/home"><h4><i class="fas fa-globe-americas"></i><emsp><br>PIAZZA!</h4></a>';
+	        document.getElementById("registration").innerHTML = registrationCounter + registrationMIT + registrationPublic;
+					// document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
+					// document.getElementById("registration").innerHTML = "<h3>2024 Program has started!</h3>";
+				}
+
+			}, 1000);
+		</script>
+
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="text-container">
+                            <h1><highlight>MIT 6.S191</highlight></h1> <!-- MIT 6.S191 -->
+                            <h1>Introduction to<br>Deep Learning</h1>
+                            <h5>MIT's introductory program on deep learning methods with applications in <span id="js-rotating">computer vision, robotics, medicine, language, game play, art</span>, and more!</h5>
+                        </div>
+                    </div> <!-- end of col -->
+
+                    <!-- Video -->
+                    <div class="col-lg-6" style="margin-top:auto; margin-bottom:auto;">
+                        <div id="preview" class="basic-1">
+
+                          <!-- Video Preview -->
+                          <div class="image-container">
+                              <div class="video-wrapper">
+                                  <a class="popup-youtube" href="https://www.youtube.com/watch?v=alfdI7S6wCY&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1" data-effect="fadeIn">
+                                  <!-- <a class="popup-youtube" href="https://www.youtube.com/watch?v=_f-W98_WHHc" data-effect="fadeIn"> -->
+
+                                      <img class="img-fluid" src="../images/video-frame.jpg" alt="alternative">
+                                      <span class="video-play-button">
+                                          <span></span>
+                                      </span>
+                                  </a>
+                              </div> <!-- end of video-wrapper -->
+                          </div> <!-- end of image-container -->
+                          <!-- end of video preview -->
+
+                        </div> <!-- end of basic-1 -->
+                    </div> <!-- end of col -->
+                    <!-- end of video -->
+
+
+                </div> <!-- end of row -->
+
+                <div class="row">
+                  <div class="col-lg-12 card-center" style="margin-top:2rem">
+                      <div id="registration"></div> <br>
+                  </div>
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+    <div class="tabs darker-background">
+        <div id="overview" class="anchor"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="text-container">
+                <h2>Description</h2>
+								<h5 style="text-align:center">An <highlight>efficient and high-intensity bootcamp</highlight> designed to teach you the fundamentals of deep learning <highlight>as quickly as possible</highlight>!</h5>
+                <p style="text-align:center">
+                  MIT's introductory program on deep learning methods with applications to natural language processing, computer vision, biology, and more! Students will gain foundational knowledge of deep learning algorithms, practical experience in building neural networks, and understanding of cutting-edge topics including large language models and generative AI. Program concludes with a project proposal competition with feedback from staff and panel of industry sponsors. Prerequisites assume calculus (i.e. taking derivatives) and linear algebra (i.e. matrix multiplication), we'll try to explain everything else along the way! Experience in Python is helpful but not necessary. Listeners are welcome!
+									<!-- <b><highlight>A complete syllabus, grading info, and student deliverables is available <a href="https://docs.google.com/document/d/1p1zAcNlogBCQFDXnSntwHFQ06pwmzewXpiQns-KfOd8/edit?usp=sharing"><highlight>HERE</highlight></a>.</highlight></b> -->
+                </p>
+
+              </div>
+            </div>  <!-- end col-lg-7  -->
+            <div class="col-lg-1"></div>
+
+            <div class="col-lg-4">
+							<div class="text-container">
+								<h2>Time and Location</h2>
+                <!-- <h5 class="text-center">
+									<highlight>MIT 6.S191</highlight><br>
+									<highlight>Mon Jan 8 - Fri Jan 12, 2024</highlight><br>
+									3pm - 6pm EST Everyday
+								</h5>
+                <p class="text-center">
+                  3:00pm-3:55pm: Lecture Part 1<br>
+                  4:00pm-4:55pm: Lecture Part 2<br>
+                  5:00pm-6:00pm: Software Labs
+                </p>
+								<h5 class="text-center">
+									<highlight>MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></highlight><br>
+									New competitions &  prizes!
+								<h5> -->
+
+                <!-- <p class="text-center">
+                  Social hosted by <a href="https://en.wikipedia.org/wiki/John_Werner"><highlight>John Werner</highlight></a> at <a href="https://www.linkventures.com/"><highlight>Link Ventures</highlight></a> on Jan 8 at 6:30pm.</highlight><br>
+                <p> -->
+
+
+								<h5 class="text-center">
+									<highlight>Mon Jan 6 - Fri Jan 10, 2025</highlight><br>
+									<!-- Every Monday at 10am ET<br>
+									Every week! -->
+								</h5>
+
+								<!-- <p class="text-center">
+									The 2024 in-person edition has completed and was held in MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a>. The online edition of the course is live on Monday at 10am ET, every week!
+                </p>
+                <p class="text-center">
+                  <a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><highlight>Subscribe here</highlight></a> to be notified when a new lecture is released!
+                </p> -->
+
+								<h5 class="text-center">
+									<highlight>Every day 1-4pm ET</highlight><br>
+									<highlight>MIT Room <a href="https://whereis.mit.edu/?go=32">32-123</a></highlight><br>
+									<highlight>New lectures, competitions, &  prizes!</highlight>
+								<h5>
+
+
+
+              </div>
+            </div>  <!-- end col-lg-4  -->
+          </div> <!-- end row -->
+          <br>
+
+        </div>
+    </div>
+
+    <!-- Schedule -->
+    <div class="tabs">
+        <div id="schedule" class="anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Schedule</h2>
+										<h4 align="center">
+											<!-- <highlight>2025 edition coming soon!</highlight> <br><i>Taught in-person at MIT &#8212; open-sourced to the world.</i> -->
+											<!-- <highlight>New 2024 lectures, slides, and labs!</highlight> <br><i>Taught in-person at MIT &#8212; open-sourced to the world.</i> -->
+											New <highlight>lectures, slides, and labs</highlight> will be open-sourced every week starting <highlight>March 3 at 11AM ET</highlight>!
+											<!-- New <highlight>2024 edition</highlight> lectures, slides, and labs! <highlight>Every Friday at 10am ET</highlight>! -->
+                    </h4>
+		    <br>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+
+
+            <!-- Day 1 -->
+            <div class="row">
+              <!-- Lecture 1 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                          <img src="../images/thumb/L1.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Intro to Deep Learning</highlight</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 1</h6>
+										<!-- <i>Jan. 6, 2025</i> -->
+                    <i>Mar. 3, 2025</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<a href="https://www.youtube.com/watch?v=alfdI7S6wCY&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=1">Video</a>] </p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L1.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 1 -->
+              <!-- Lecture 2 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/L2.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Sequence Modeling</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 2</h6>
+										<!-- <i>Jan. 6, 2025</i> -->
+                    <i>Mar. 10, 2025</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=GvezxUdLrEk&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=2'>Video</a>] </p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L2.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 2 -->
+
+              <!-- Lab 1 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/Lab1.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Learning in Python; Music Generation</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 1</h6>
+										<!-- <i>Due Jan. 26, 2021</i> -->
+										<p>[<a href='https://github.com/MITDeepLearning/introtodeeplearning/tree/master/lab1'>Code</a>]</p>
+										<!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 1 -->
+
+            </div> <!-- end of Day 1 -->
+
+
+            <!-- Day 2 -->
+            <div class="row">
+              <!-- Lecture 3 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/L3.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Computer Vision</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 3</h6>
+										<!-- <i>Jan. 7, 2025</i> -->
+                    <i>Mar. 17, 2025</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=oGpzWAlP5p0&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4&ab_channel=AlexanderAmini'>Video</a>] </p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L3.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 3 -->
+
+              <!-- Lecture 4 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/L4.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Generative Modeling</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 4</h6>
+										<!-- <i>Jan. 7, 2025</i> -->
+                    <i>Mar. 24, 2025</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=SdTZAMDKrNY&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI'>Video</a>] </p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L4.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 4 -->
+
+              <!-- Lab 2 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/Lab2.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Facial Detection Systems</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 2</h6>
+										<!-- <i>Mar. 05, 2021</i> -->
+                    <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<a href='https://github.com/MITDeepLearning/introtodeeplearning/tree/master/lab2'>Code</a>]</p>
+                    <!-- <p>[<a href="AAAI_MitigatingAlgorithmicBias.pdf">Paper</a>] [<b>Code</b>] <i>coming soon!</i></p> -->
+                    <!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 2 -->
+
+            </div> <!-- end of Day 2 -->
+
+
+            <!-- Day 3 -->
+            <div class="row">
+
+
+
+              <!-- Lecture 5 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/L5.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Deep Reinforcement Learning</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 5</h6>
+										<!-- <i>Jan. 8, 2025</i> -->
+                    <i>Mar. 31, 2025</i>
+                    <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=to-lHJfK4pw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=5'>Video</a>] </p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 5 -->
+
+
+
+
+
+              <!-- Lecture 6 -->
+							<div class="col-md-4">
+								<div class="row">
+									<div class="col-md-2 v-center">
+										<div class="card card-lecture">
+											<div class="card-icon">
+												<img src="../images/thumb/L6.gif" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-1"></div>
+									<div class="col-md-8 v-center">
+										<div class="card card-lecture">
+											<h5 class="card-title"><highlight>New Frontiers</highlight></h5>
+										</div>
+									</div>
+								</div>
+								<div class="row card-lecture">
+									<div class="col-md-12">
+										<h6 class="card-title">Lecture 6</h6>
+										<!-- <i>Jan. 8, 2025</i> -->
+                    <i>Apr. 7, 2025</i>
+										<p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=HLKo4fJx_7k&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=6'>Video</a>] </p>
+										<!-- <p>[<a href='slides/6S191_MIT_DeepLearning_L6.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+									</div>
+								</div>
+							</div> <!-- end of Lecture 6 -->
+
+
+
+
+
+
+              <!-- Lab 3 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/yoda.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Fine-Tune an LLM,<br>You Must!</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Software Lab 3</h6>
+										<!-- <i>Due Jan. 26, 2021</i> -->
+                    <p> [<a href='https://github.com/MITDeepLearning/introtodeeplearning/tree/master/lab3'>Code</a>] </p>
+										<!-- <p>[<b>Code</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 3 -->
+
+            </div> <!-- end of Day 3 -->
+
+
+
+
+
+            <!-- Day 4 -->
+            <div class="row">
+
+
+							<!-- Lecture 7 -->
+							<div class="col-md-4">
+								<div class="row">
+									<div class="col-md-2 v-center">
+										<div class="card card-lecture">
+											<div class="card-icon">
+												<img src="../images/thumb/document.gif" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-1"></div>
+									<div class="col-md-8 v-center">
+										<div class="card card-lecture">
+											<h5 class="card-title"><highlight>Large Language Models (I)</highlight></h5>
+										</div>
+									</div>
+								</div>
+								<div class="row card-lecture">
+									<div class="col-md-12">
+										<h6 class="card-title">Lecture 7</h6>
+										<!-- <i>Jan. 9, 2025</i> -->
+                    <i>Apr. 14, 2025</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#themis_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<a href="https://www.youtube.com/watch?v=kIiO4VSrivU&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=5">Video</a>]</p> -->
+										<!-- <p>[<a data-toggle="modal" data-target="#themis_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L5.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<a data-toggle="modal" data-target="#google_modal">Info</a>] [<a href="https://www.youtube.com/watch?v=ZNodOsz94cc&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7">Video</a>]
+										<!-- <p>[<a href="https://www.youtube.com/watch?v=P7Hkh2zOGQ0&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7">Video</a>]</p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+									</div>
+								</div>
+							</div> <!-- end of Lecture 7 -->
+
+
+              <!-- Lecture 8 -->
+							<div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/brain.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Large Language Models (II)</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 8</h6>
+										<!-- <i>Jan. 9, 2025</i> -->
+                    <i>Apr. 21, 2025</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#liquid_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L8.pdf'>Slides</a>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<p>[<a data-toggle="modal" data-target="#liquid_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=_HfdncCbMOE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>] </p>
+										<!-- <p>[<a data-toggle="modal" data-target="#liquid_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<a href="https://www.youtube.com/watch?v=ZAGiinWiFsE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8">Video</a>]</p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 8 -->
+
+              <!-- Lab 4 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/work.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Final Project</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Work on final projects</h6>
+										<!-- <i>Due Jan. 28, 2021</i> -->
+                    <p></p>
+                  </div>
+                </div>
+              </div> <!-- end of Lab 4 -->
+
+            </div> <!-- end of Day 4 -->
+
+            <!-- Day 5 -->
+            <div class="row">
+              <!-- Lecture 9 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/rocket.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>AI in the Wild</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 9</h6>
+										<!-- <i>Jan. 10, 2025</i> -->
+                    <i>Apr. 28, 2025</i>
+										<!-- <p>[<a data-toggle="modal" data-target="#comet_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p>  -->
+										<p>[<a data-toggle="modal" data-target="#comet_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=CyCUZAf8xSU&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=80'>Video</a>] </p>
+										<!-- <p>[<a data-toggle="modal" data-target="#comet_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+										<!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 9 -->
+
+
+              <!-- Lecture 10 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/L_DNA.gif" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>AI for Biology</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Lecture 10</h6>
+										<!-- <i>Jan. 10, 2025</i> -->
+                    <i>May 5, 2025</i>
+			  							<!-- <p>[<a data-toggle="modal" data-target="#microsoft_modal">Info</a>] [<a href='slides/6S191_MIT_DeepLearning_L9.pdf'>Slides</a>] [<a href='https://www.youtube.com/watch?v=BCZ56MU-KhQ&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=9'>Video</a>]</p> -->
+                      <p>[<a data-toggle="modal" data-target="#microsoft_modal">Info</a>] [<a href='https://www.youtube.com/watch?v=SSzSOeGP87I&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=10'>Video</a>] </p>
+                      <!-- <p>[<a data-toggle="modal" data-target="#microsoft_modal">Info</a>] [<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                      <!-- <p>[<b>Slides</b>] [<b>Video</b>] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lecture 10 -->
+
+              <!-- Lab 5 -->
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-2 v-center">
+                    <div class="card card-lecture">
+                      <div class="card-icon">
+                        <img src="../images/thumb/work.jpg" alt="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-8 v-center">
+                    <div class="card card-lecture">
+                      <h5 class="card-title"><highlight>Project Presentations</highlight></h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="row card-lecture">
+                  <div class="col-md-12">
+                    <h6 class="card-title">Pitch your ideas, awards, and celebration!</h6>
+<!--                     <p>[Video] <i>coming soon!</i></p> -->
+                  </div>
+                </div>
+              </div> <!-- end of Lab 5 -->
+
+            </div> <!-- end of Day 5 -->
+
+
+        </div> <!-- end of container -->
+    </div> <!-- end of tabs -->
+    <!-- end of schedule -->
+
+    <div class="tabs darker-background">
+      <div id="faq" class="anchor"></div>
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Frequently Asked Questions</h2>
+            <div class="text-container card-center">
+              <h5>For any other questions please reach out to the staff at <a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a>.</h5>
+              <br>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+                <!--Accordion wrapper-->
+                <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingOne1">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_listeners"
+                        aria-expanded="false" aria-controls="collapse_listeners">
+                        <h5 class="mb-0 card-center">
+                          Are listeners allowed to attend?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_listeners" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        All listeners are welcome to attend!<br>
+                        <!-- <ul>
+                          <li>If you are an MIT student, please formally register as a listener on Websis.
+                            <a lass="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">Click here</a> for instructions</li>
+                          <li>If you are not an MIT student, you can still attend the course without registering. </li>
+                        </ul> -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingOne1">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_grade"
+                        aria-expanded="false" aria-controls="collapse_grade">
+                        <h5 class="mb-0 card-center">
+                          What is the grading policy?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_grade" class="collapse" role="tabpanel" aria-labelledby="headingOne1"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        In 2024, 6.S191 will be offered as a for-credit 6-unit MIT course and graded P/D/F based on completion of project proposal assignment.
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingTwo2">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapseTwo2"
+                        aria-expanded="false" aria-controls="collapseTwo2">
+                        <h5 class="mb-0 card-center">
+                          How can I register?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapseTwo2" class="collapse" role="tabpanel" aria-labelledby="headingTwo2"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        Registration opens on Dec 1 at 9am. If you are a current MIT student please <a href="https://student.mit.edu/cgi-bin/sfprwtrm.sh">register here</a> after registration opens. You can specify if you want to take the course for credit or as a listener there.
+                        <!-- If you are a current MIT student please <a href="https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm">register here</a>. You can do this by clicking "create new form" and selecting "Add Drop". Enter the subject information (6.S191) and 6 units when prompted. You can also specify if you want to be registered as a listener or regular student there. -->
+												<br><br>In addition, everyone interested in taking the course (MIT or not; and in-person or not), should also register on the <a href="http://eepurl.com/gQJo2D">internal registration</a> to receive updates.
+												<br><br>After the MIT program, the content will be open-sourced to the world. Again, please sign up for the <a href="http://eepurl.com/gQJo2D">internal registration</a> to receive updates when this occurs.
+                        <!-- If you would like to receive course related updates and lecture materials please sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>. -->
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_prereq"
+                        aria-expanded="false" aria-controls="collapse_prereq">
+                        <h5 class="mb-0 card-center">
+                          What pre-requisites are required?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_prereq" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        <p>
+                          We are expecting very elementary knowledge of linear algebra and calculus. How to multiply matrices, take derivatives and apply the chain rule. Familiarity in Python is a big plus as well.
+                          The program will be beginner friendly since we have many registered students from outside of computer science.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx" href="#collapse_mailing"
+                        aria-expanded="false" aria-controls="collapse_mailing">
+                        <h5 class="mb-0 card-center">
+                          Is there a mailing list I can join?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_mailing" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx">
+                      <div class="card-body">
+                        <p>
+													If you would like to receive related updates and lecture materials please subscribe to our <a href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg">YouTube channel</a> and sign up for our <a href="http://eepurl.com/gQJo2D">mailing list</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-6">
+              <!--Accordion wrapper-->
+              <div class="accordion md-accordion" id="accordionEx2" role="tablist" aria-multiselectable="true">
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_open"
+                        aria-expanded="false" aria-controls="collapse_open">
+                        <h5 class="mb-0 card-center">
+                          Are the materials open-source?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_open" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          All materials are open-sourced to the world for free and are copyrighted under the <a href="https://github.com/MITDeepLearning/introtodeeplearning/blob/master/LICENSE.md">MIT license</a>. If you are an instructor and would like to use any materials from this program (slides, labs, code), you must add the following reference to each slide:
+                          <blockquote><b>&copy;	Alexander Amini and Ava Amini<br>MIT Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_copywrite"
+                        aria-expanded="false" aria-controls="collapse_copywrite">
+                        <h5 class="mb-0 card-center">
+                          How do I reference these materials?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_copywrite" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          All materials are copyrighted and licensed under the <a href="https://github.com/MITDeepLearning/introtodeeplearning/blob/master/LICENSE.md">MIT license</a>. If you are an instructor and would like to use any materials from this program (slides, labs, code), you must add the following reference to each slide:
+                          <blockquote><b>&copy;	Alexander Amini and Ava Amini<br>MIT 6.S191: Introduction to Deep Learning<br><a href="http://introtodeeplearning.com">IntroToDeepLearning.com</a></b></blockquote>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_teaching"
+                        aria-expanded="false" aria-controls="collapse_teaching">
+                        <h5 class="mb-0 card-center">
+                          How can I help teach this class?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_teaching" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          If you are an MIT student, postdoc, faculty, or affiliate and would like to become involved with this program please email <a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a>. We are always accepting new applications to join the program staff.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_sponsor"
+                        aria-expanded="false" aria-controls="collapse_sponsor">
+                        <h5 class="mb-0 card-center">
+                          How can I become a sponsor?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_sponsor" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          This class would not be possible without our amazing sponsors and has been sponsored by Google, IBM, NVIDIA, Microsoft, Amazon, LambdaLabs, Tencent AI, Ernst and Young, and Onepanel. If you are interested in becoming involved in this program as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                  <!-- Accordion card -->
+                  <div class="card card-faq">
+                    <!-- Card header -->
+                    <div class="card-header" role="tab" id="headingThree3">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#accordionEx2" href="#collapse_previous"
+                        aria-expanded="false" aria-controls="collapse_previous">
+                        <h5 class="mb-0 card-center">
+                          Where are the websites from past editions?
+                        </h5>
+                      </a>
+                    </div>
+
+                    <!-- Card body -->
+                    <div id="collapse_previous" class="collapse" role="tabpanel" aria-labelledby="headingThree3"
+                      data-parent="#accordionEx2">
+                      <div class="card-body">
+                        <p>
+                          To view archived versions of this website from past years please click here for <a href="./2024/index.html">2024</a>, <a href="./2023/index.html">2023</a>, <a href="./2022/index.html">2022</a>, <a href="./2021/index.html">2021</a>, <a href="./2020/index.html">2020</a>, <a href="./2019/index.html">2019</a>, <a href="./2018/index.html">2018</a>, and <a href="./2017/index.html">2017</a>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Accordion card -->
+
+                </div>
+                <!-- Accordion wrapper -->
+          </div> <!-- end col-lg-6  -->
+        </div> <!-- end row  -->
+
+
+      </div>
+    </div>
+
+
+    <!-- Team -->
+    <div class="slider-1">
+        <div id="team" class="anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="title card-center">
+                    <h2>Team</h2>
+                  </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3"></div>
+              <div class="col-lg-3">
+                  <div class="card card-center">
+                      <img class="card-image-primary" src="../images/people/amini.jpg" alt="amini">
+                      <div class="card-body">
+                          <p class="testimonial-author">Alexander Amini</p>
+                          <p class="testimonial-text">Lead Instructor<br>Organizer</p>
+
+                          <span class="fa-stack">
+                              <a href="https://www.mit.edu/~amini">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fas fa-globe fa-stack-1x"></i>
+                              </a>
+                          </span>
+                          <span class="fa-stack">
+                              <a href="https://www.linkedin.com/in/alexanderamini/">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fab fa-linkedin fa-stack-1x"></i>
+                              </a>
+                          </span>
+                          <span class="fa-stack">
+                              <a href="https://twitter.com/xanamini">
+                                  <i class="fas fa-circle fa-stack-2x"></i>
+                                  <i class="fab fa-twitter fa-stack-1x"></i>
+                              </a>
+                          </span>
+
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-3">
+                  <div class="card card-center">
+                      <img class="card-image-primary" src="../images/people/avaamini.jpg" alt="avaamini">
+                      <div class="card-body">
+                        <p class="testimonial-author">Ava Amini</p>
+                        <p class="testimonial-text">Lead Instructor<br>Organizer</p>
+
+												<span class="fa-stack">
+                            <a href="https://www.avaamini.com">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-globe fa-stack-1x"></i>
+                            </a>
+                        </span>
+
+                        <span class="fa-stack">
+                            <a href="https://www.linkedin.com/in/ava-amini/">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/avapamini">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                      </div>
+                  </div>
+              </div>
+							<!-- <div class="col-lg-4">
+									<div class="card card-center">
+											<img class="card-image-primary" src="../images/people/sadhanalolla.jpg" alt="sadhana">
+											<div class="card-body">
+													<p class="testimonial-author">Sadhana Lolla</p>
+													<p class="testimonial-text">Instructor<br>Lead TA</p>
+
+													<span class="fa-stack">
+															<a href="https://slolla.github.io/">
+																	<i class="fas fa-circle fa-stack-2x"></i>
+																	<i class="fas fa-globe fa-stack-1x"></i>
+															</a>
+													</span>
+													<span class="fa-stack">
+															<a href="https://www.linkedin.com/in/sadhana-lolla/">
+																	<i class="fas fa-circle fa-stack-2x"></i>
+																	<i class="fab fa-linkedin fa-stack-1x"></i>
+															</a>
+													</span>
+											</div>
+									</div>
+							</div> -->
+              <!-- <div class="col-lg-2"></div> -->
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                  <div class="subtitle card-center">
+                    <h3>TAs and Staff</h3>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Card Slider -->
+                    <div class="slider-container">
+                        <div class="swiper-container card-slider">
+                            <div class="swiper-wrapper">
+
+													<!-- Slide -->
+													 <div class="swiper-slide">
+															<div class="card">
+																	<img class="card-image card-sub-image" src="../images/people/victory.jpeg" alt="victory">
+																	<div class="card-body">
+																		<p class="testimonial-author">Victory Yinka-Banjo</p>
+																		<p class="testimonial-author">Lead TA</p>
+																	</div>
+																</div>
+														</div> <!-- end of swiper-slide -->
+														<!-- end of slide -->
+
+														<!-- Slide -->
+                             <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/sadhanalolla.jpg" alt="sadhanalolla">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Sadhana Lolla</p>
+                                      <p class="testimonial-author">Lead TA</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+															<!-- Slide -->
+	                             <div class="swiper-slide">
+	                                <div class="card">
+	                                    <img class="card-image card-sub-image" src="../images/people/maxi.jpg" alt="maxi">
+	                                    <div class="card-body">
+	                                      <p class="testimonial-author">Maxi Attiogbe</p>
+	                                      <p class="testimonial-author">Teaching Assistant</p>
+	                                    </div>
+	                                  </div>
+	                              </div> <!-- end of swiper-slide -->
+	                              <!-- end of slide -->
+
+																<!-- Slide -->
+																 <div class="swiper-slide">
+																		<div class="card">
+																				<img class="card-image card-sub-image" src="../images/people/davidchaudhari.jpg" alt="maxi">
+																				<div class="card-body">
+																					<p class="testimonial-author">David Chaudhari</p>
+																					<p class="testimonial-author">Teaching Assistant</p>
+																				</div>
+																			</div>
+																	</div> <!-- end of swiper-slide -->
+																	<!-- end of slide -->
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/shornaalam.jpg" alt="shornaalam">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Shorna Alam</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+															<!-- Slide -->
+															<div class="swiper-slide">
+																<div class="card">
+																		<img class="card-image card-sub-image" src="../images/people/anirudhvaliveru.jpeg" alt="anirudhvaliveru">
+																		<div class="card-body">
+																			<p class="testimonial-author">Anirudh Valiveru</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+																		</div>
+																	</div>
+															</div> <!-- end of swiper-slide -->
+															<!-- end of slide -->
+
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/divyanori.jpg" alt="divyanori">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Divya Nori</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/alexlavaee.jpg" alt="alexlavaee">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Alex Lavaee</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/shreyaravikumar.jpg" alt="shreyaravikumar">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Shreya Ravikumar</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/franklinwang.jpg" alt="franklinwang">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Franklin Wang</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/johnwerner.jpg" alt="johnwerner">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">John Werner</p>
+                                      <p class="testimonial-author">Community & Strategy</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+
+															<!-- Slide -->
+                              <div class="swiper-slide">
+                                <div class="card">
+                                    <img class="card-image card-sub-image" src="../images/people/evaxie.jpg" alt="evaxie">
+                                    <div class="card-body">
+                                      <p class="testimonial-author">Eva Xie</p>
+                                      <p class="testimonial-author">Teaching Assistant</p>
+                                    </div>
+                                  </div>
+                              </div> <!-- end of swiper-slide -->
+                              <!-- end of slide -->
+
+
+
+                            </div> <!-- end of swiper-wrapper -->
+
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <!-- end of add arrows -->
+
+                        </div> <!-- end of swiper-container -->
+                    </div> <!-- end of slider-container -->
+                    <!-- end of card slider -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row card-center">
+              <div class="col-lg-12">
+                  <h5>We are always accepting new applications to join the program staff. If you are interested in becoming a Teaching Assistant (TA), please contact <a href="mailto:introtodeeplearning-staff@mit.edu" target="_top">introtodeeplearning-staff@mit.edu</a></h5>
+              </div>
+            </div>
+
+          </div> <!-- end of container -->
+    </div> <!-- end of slider-1 -->
+    <!-- end of team -->
+
+
+    <!-- Details 1 -->
+    <div class="basic-2">
+        <div id="sponsors" class="anchor"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 card-center">
+                  <div class="title">
+                    <h2>Sponsors</h2>
+                  </div>
+                  <h5>This program and delivery would not be possible without our amazing sponsors! If you are interested in becoming involved in this program as a sponsor please contact us at <b><a href="mailto:introtodeeplearning-staff@mit.edu">introtodeeplearning-staff@mit.edu</a></b></h5>
+                  <br>
+                  <img class="img-fluid" src="../images/sponsor_logos_background_2025.png" alt="">
+
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 1 -->
+
+
+    <!-- Footer -->
+    <div id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-col">
+                        <h4>About!</h4>
+                        <p>6.S191 teaches the foundations of deep learning at MIT!</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col middle">
+                        <h4>Lectures and Labs</h4>
+                        <p>We open-source all materials. Checkout the lecture schedule for details!</p>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-md-4">
+                    <div class="footer-col last">
+                        <h4>Social Media</h4>
+                        <span class="fa-stack">
+                            <a href="mailto:introtodeeplearning-staff@mit.edu">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://twitter.com/MITDeepLearning">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+
+                    </div>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © MIT 6.S191. <a href="https://github.com/lengstrom/fast-style-transfer/">banner image</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright -->
+    <!-- end of copyright -->
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="google_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+										<img src="../images/people/petergrabowski.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h4 align="left">Introduction to Language Modeling</h4>
+									<h5 align="left">Peter Grabowski, Lead of Gemini Applied Research, Google</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+									Want to get started with LLMs? This lecture will cover an introduction to language modeling and prompt engineering, example use cases and applications, and a discussion of common considerations for LLM usage (cost, efficiency, accuracy, bias).
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Peter leads the Gemini Applied Research group, focused on developing fast, efficient, and scalable models in partnership with DeepMind, Search, Ads, Cloud, and other teams across Google. Prior to that, he led a group focused on Google's Enterprise AI, worked on making the Google Assistant better for Kids, and led the data integration / machine learning team at Nest. Peter loves to teach, and is a member of the faculty at UC Berkeley's School of Information, where he teaches courses focused on Deep Learning and Natural Language Processing.
+								</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="liquid_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+										<img src="../images/people/maximelabonne.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h4 align="left">Introduction to LLM Post-Training</h4>
+									<h5 align="left">Maxime Labonne, Head of Post-Training, Liquid AI</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  In this talk, we will cover the fundamentals of modern LLM post-training at various scales with concrete examples. High-quality data generation is at the core of this process, focusing on the accuracy, diversity, and complexity of the training samples. We will explore key training techniques, including supervised fine-tuning, preference alignment, and model merging. The lecture will delve into evaluation frameworks with their pros and cons for measuring model performance. We will conclude with an overview of emerging trends in post-training methodologies and their implications for the future of LLM development.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Maxime Labonne is Head of Post-Training at Liquid AI. He holds a Ph.D. in Machine Learning from the Polytechnic Institute of Paris and is a Google Developer Expert in AI/ML. He has made significant contributions to the open-source community, including the LLM Course, tutorials on fine-tuning, tools such as LLM AutoEval, and several state-of-the-art models like NeuralDaredevil. He is the author of the best-selling books “LLM Engineer’s Handbook” and “Hands-On Graph Neural Networks Using Python”.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="microsoft_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <div class="card-icon">
+										<img src="../images/people/avaamini.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h4 align="left">AI to Optimize Biology</h4>
+									<h5 align="left">Ava Amini, Senior Research Scientist, Microsoft</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  The potential of AI in biology is immense, yet its success is contingent on interfacing effectively with wet-lab experimentation and remaining grounded in the system, structure, and physics of biology. I will share how, at Microsoft Research, we are developing new AI systems that help us better understand and design biology via generative design and interactive discovery. I will focus on Generative AI models for the design of novel and useful biomolecules, expanding our ability to engineer new proteins for therapeutic, biological, and industrial applications and beyond.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Ava Amini is a Senior Researcher at Microsoft, where she develops new AI technologies for precision biology and medicine. She completed her PhD in Biophysics at Harvard University and her BS in Computer Science and Molecular Biology at MIT and has been recognized by the National Academy of Engineering, the National Science Foundation, TEDx, Venture Beats, and the Association of MIT Alumnae, among others, for her research. Ava is passionate about AI education and outreach -- she is a lead organizer and instructor for MIT Introduction to Deep Learning, where she has taught AI to 1000s of students in-person and over 100,000 globally registered students online, garnering more than 11 million online lecture views, and served as a co-founder and director of MomentumAI, which taught all-expenses-paid education programs for high schoolers to learn AI.
+								</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="comet_modal" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="custom-modal-header modal-header">
+            <a class="button icon close" data-dismiss="modal">&times;</a>
+          </div>
+          <div class="custom-modal-body modal-body">
+
+            <div class="row">
+              <div class="col-md-4 v-center">
+                <div class="card card-lecture card-modal">
+                  <!-- <div class="card-icon">
+                    <img src="../images/people/nikolaskaris.jpg" alt="">
+                  </div> -->
+                  <div class="card-icon">
+                    <img src="../images/people/douglasblank.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-8 v-center">
+                <div class="card card-lecture card-modal">
+                  <h4 align="left">A Hippocratic Oath, for your AI</h4>
+                  <!-- <h5 align="left">Nikolas Laskaris, VP, Comet ML</h5> -->
+                  <h5 align="left">Douglas Blank, Head of Research, Comet ML</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 v-center">
+                <h6>Talk Abstract</h6>
+                <p>
+                  While Deep Learning has achieved remarkable advancements, I believe its deployment requires a shift in perspective. Just as the Hippocratic Oath guides medical practice, a fundamental ethical framework is crucial for responsible AI deployment. This talk delves into the critical question: Can your AI system adhere to the principle of 'Do no Harm'? We will explore the risks associated with releasing your AI project into the wild, while considering the ethical implications alongside technical advancements.
+                </p>
+
+                <h6>Speaker Bio</h6>
+                <p>
+                  Douglas Blank is the Head of Research at Comet ML, where he works with many teams, including Engineering, Customer Success, and Product Design. Prior to Comet, Douglas completed his PhD in Computer Science and Cognitive Science from Indiana University, Bloomington. His thesis explored the training of neural networks to make analogies. He taught courses in Robotics, Cognitive Science, and Computer Science at Bryn Mawr College, where he created a research agenda called "Developmental Robotics," focusing on using Deep Learning as the foundation for a mentally developing robot.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="assets/js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="assets/js/bootstrap.min.js?v=1"></script> <!-- Bootstrap framework -->
+    <script src="assets/js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="assets/js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="assets/js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="assets/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+    <script src="assets/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="assets/js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
