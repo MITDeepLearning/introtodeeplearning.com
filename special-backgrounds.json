@@ -1,0 +1,48 @@
+[
+    {
+        "startDate": "12-31",
+        "endDate": "01-01",
+        "image": "images/backgrounds/doodles/newyears.jpg"
+    },
+    {
+        "startDate": "02-14",
+        "endDate": "02-14",
+        "image": "images/backgrounds/doodles/valentines.jpg"
+    },
+    {
+        "startDate": "03-14",
+        "endDate": "03-14",
+        "image": "images/backgrounds/doodles/pi.jpg"
+    },
+    {
+        "startDate": "03-17",
+        "endDate": "03-17",
+        "image": "images/backgrounds/doodles/stpatrick.jpg"
+    },
+    {
+        "startDate": "04-05",
+        "endDate": "04-05",
+        "image": "images/backgrounds/doodles/easter.jpg"
+    },
+    {
+        "startDate": "07-04",
+        "endDate": "07-04",
+        "image": "images/backgrounds/doodles/independence.jpg"
+    },
+    {
+        "startDate": "10-29",
+        "endDate": "11-01",
+        "image": "images/backgrounds/doodles/halloween.jpg"
+    },
+    {
+        "startDate": "11-25",
+        "endDate": "11-27",
+        "image": "images/backgrounds/doodles/thanksgiving.jpg"
+    },
+    {
+      "startDate": "12-23",
+      "endDate": "12-26",
+      "image": "images/backgrounds/doodles/xmas.jpg"
+    }
+]
+

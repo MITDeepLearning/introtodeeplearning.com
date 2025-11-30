@@ -49,7 +49,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link href="assets/css/swiper.css" rel="stylesheet">
   	<link href="assets/css/magnific-popup.css" rel="stylesheet">
-  	<link href="assets/css/styles.css?v=2" rel="stylesheet">
+  	<link href="assets/css/styles.css?v=4" rel="stylesheet">
 
   	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
@@ -118,6 +118,22 @@
 
 
     <script>
+			// Global date override for testing - check for ?date=YYYY-MM-DD in URL
+			window.getCurrentDate = function() {
+				const urlParams = new URLSearchParams(window.location.search);
+				const dateParam = urlParams.get('date');
+				if (dateParam) {
+					// Parse date as YYYY-MM-DD and create at noon local time to avoid timezone issues
+					const [year, month, day] = dateParam.split('-').map(Number);
+					const overrideDate = new Date(year, month - 1, day, 12, 0, 0);
+					if (!isNaN(overrideDate.getTime())) {
+						console.log('🕐 Simulating date:', dateParam, '→', overrideDate.toDateString());
+						return overrideDate;
+					}
+				}
+				return new Date();
+			}
+
 			// Set the date we're counting down to
       var registrationDate = new Date("January 05, 2026 13:00:00 GMT-05:00").getTime();
 			var registrationHeader = "";
@@ -141,7 +157,7 @@
 			var x = setInterval(function() {
 
 			  // Get todays date and time
-			  var now = new Date().getTime();
+			  var now = getCurrentDate().getTime();
 
 			  // Find the distance between now and the count down date
         var registrationDistance = registrationDate - now;
@@ -210,6 +226,7 @@
 
     <!-- Header -->
     <header id="header" class="header">
+        <!-- Animated background slideshow - populated dynamically from header-images.json -->
         <div class="header-content">
             <div class="container">
                 <div class="row">
@@ -217,7 +234,7 @@
                         <div class="text-container">
                             <h1><highlight>MIT 6.S191</highlight></h1> <!-- MIT 6.S191 -->
                             <h1>Introduction to<br>Deep Learning</h1>
-                            <h5>MIT's introductory program on deep learning methods with applications in <span id="js-rotating">computer vision, robotics, medicine, language, game play, art</span>, and more!</h5>
+                            <h5>MIT's introductory program on deep learning methods with applications in <span id="js-rotating">vision, robotics, medicine, language, game play, art</span>, and more!</h5>
                         </div>
                     </div> <!-- end of col -->
 
@@ -1665,5 +1682,176 @@
     <script src="assets/js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
     <script src="assets/js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="assets/js/scripts.js"></script> <!-- Custom scripts -->
+    
+    <script>
+        // Helper function to convert MM-DD to comparable number (MMDD)
+        function dateToComparable(dateStr) {
+            const [month, day] = dateStr.split('-').map(Number);
+            return month * 100 + day;
+        }
+        
+        // Helper function to check if today falls within a date range
+        function isInDateRange(todayComparable, startDate, endDate) {
+            const start = dateToComparable(startDate);
+            const end = dateToComparable(endDate);
+            
+            // Handle ranges that cross year boundary (e.g., 12-25 to 01-05)
+            if (start <= end) {
+                return todayComparable >= start && todayComparable <= end;
+            } else {
+                return todayComparable >= start || todayComparable <= end;
+            }
+        }
+        
+        // Get today's date in MM-DD format
+        const today = getCurrentDate();
+        const todayKey = String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+        const todayComparable = dateToComparable(todayKey);
+        console.log('🎨 Checking special backgrounds for date:', todayKey, '| Comparable:', todayComparable);
+        
+        // Load special backgrounds and check for matches
+        fetch('special-backgrounds.json')
+            .then(response => response.json())
+            .then(specialBackgrounds => {
+                console.log('📅 Loaded special backgrounds:', specialBackgrounds);
+                // Find if today matches any special background
+                const matchedSpecial = specialBackgrounds.find(bg => {
+                    const matches = isInDateRange(todayComparable, bg.startDate, bg.endDate);
+                    console.log(`  Checking ${bg.startDate} to ${bg.endDate}: ${matches ? '✅ MATCH' : '❌ no match'}`);
+                    return matches;
+                });
+                
+                if (matchedSpecial) {
+                    console.log('🎉 MATCH FOUND! Using special background:', matchedSpecial.image);
+                    // Special date: show static special background
+                    const header = document.querySelector('.header');
+                    const div = document.createElement('div');
+                    div.style.position = 'absolute';
+                    div.style.top = '0';
+                    div.style.left = '0';
+                    div.style.width = '100%';
+                    div.style.height = '100%';
+                    div.style.backgroundImage = `url('${matchedSpecial.image}')`;
+                    div.style.backgroundSize = 'cover';
+                    div.style.backgroundPosition = 'center center';
+                    div.style.backgroundRepeat = 'no-repeat';
+                    div.style.zIndex = '1';
+                    header.insertBefore(div, header.firstChild);
+                } else {
+                    console.log('📷 No special background for today. Loading regular slideshow.');
+                    // Normal day: load slideshow from JSON
+                    fetch('header-images.json')
+                        .then(response => response.json())
+                        .then(images => {
+                            const header = document.querySelector('.header');
+                            const numImages = images.length;
+                            const cycleTime = 8; // seconds per image
+                            const overlapTime = 1; // seconds of overlap between transitions
+                            const transitionOffset = cycleTime - overlapTime; // 7 seconds between starts
+                            const totalCycle = numImages * transitionOffset;
+                            
+                            // Create CSS animation keyframes dynamically
+                            const fadeInPercent = (1 / totalCycle) * 100;
+                            const showEndPercent = ((cycleTime - overlapTime) / totalCycle) * 100;
+                            const fadeOutPercent = ((cycleTime) / totalCycle) * 100;
+                            
+                            const style = document.createElement('style');
+                            style.textContent = `
+                                @keyframes headerImageAnimation {
+                                    0% { opacity: 0; }
+                                    ${fadeInPercent.toFixed(2)}% { opacity: 1; }
+                                    ${showEndPercent.toFixed(2)}% { opacity: 1; }
+                                    ${fadeOutPercent.toFixed(2)}% { opacity: 0; }
+                                    100% { opacity: 0; }
+                                }
+                                .header-bg-layer {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    background-position: center center;
+                                    background-repeat: no-repeat;
+                                    z-index: 1;
+                                    opacity: 0;
+                                    animation: headerImageAnimation ${totalCycle}s linear infinite;
+                                }
+                            `;
+                            document.head.appendChild(style);
+                            
+                            // Create background divs for each image with overlapping delays
+                            images.forEach((imgPath, i) => {
+                                const div = document.createElement('div');
+                                div.className = 'header-bg-layer';
+                                div.style.backgroundImage = `url('${imgPath}')`;
+                                div.style.animationDelay = (i * transitionOffset) + 's';
+                                header.insertBefore(div, header.firstChild);
+                            });
+                        })
+                        .catch(err => {
+                            // Fallback to single static image
+                            const header = document.querySelector('.header');
+                            header.style.background = 'linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url(images/header-background.jpg) center center no-repeat';
+                            header.style.backgroundSize = 'cover';
+                        });
+                }
+            })
+            .catch(err => {
+                // If special-backgrounds.json fails to load, proceed with normal slideshow
+                fetch('header-images.json')
+                    .then(response => response.json())
+                    .then(images => {
+                        const header = document.querySelector('.header');
+                        const numImages = images.length;
+                        const cycleTime = 8;
+                        const overlapTime = 1;
+                        const transitionOffset = cycleTime - overlapTime;
+                        const totalCycle = numImages * transitionOffset;
+                        
+                        const fadeInPercent = (1 / totalCycle) * 100;
+                        const showEndPercent = ((cycleTime - overlapTime) / totalCycle) * 100;
+                        const fadeOutPercent = ((cycleTime) / totalCycle) * 100;
+                        
+                        const style = document.createElement('style');
+                        style.textContent = `
+                            @keyframes headerImageAnimation {
+                                0% { opacity: 0; }
+                                ${fadeInPercent.toFixed(2)}% { opacity: 1; }
+                                ${showEndPercent.toFixed(2)}% { opacity: 1; }
+                                ${fadeOutPercent.toFixed(2)}% { opacity: 0; }
+                                100% { opacity: 0; }
+                            }
+                            .header-bg-layer {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-size: cover;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                z-index: 1;
+                                opacity: 0;
+                                animation: headerImageAnimation ${totalCycle}s linear infinite;
+                            }
+                        `;
+                        document.head.appendChild(style);
+                        
+                        images.forEach((imgPath, i) => {
+                            const div = document.createElement('div');
+                            div.className = 'header-bg-layer';
+                            div.style.backgroundImage = `url('${imgPath}')`;
+                            div.style.animationDelay = (i * transitionOffset) + 's';
+                            header.insertBefore(div, header.firstChild);
+                        });
+                    })
+                    .catch(err => {
+                        const header = document.querySelector('.header');
+                        header.style.background = 'linear-gradient(to bottom right, rgba(72, 72, 212, 0), rgba(241, 104, 104, 0)), url(images/header-background.jpg) center center no-repeat';
+                        header.style.backgroundSize = 'cover';
+                    });
+            });
+    </script>
 </body>
 </html>
