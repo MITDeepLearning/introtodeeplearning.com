@@ -134,13 +134,33 @@
 				return new Date();
 			}
 
-			// Set the date we're counting down to
+			// --- Season header config (two updates per year) ---
+			//
+			// Update 1 — start of season (before/during registration):
+			//   Set registrationDate and numLectures. Leave firstLectureDate = null.
+			//   → Shows registration countdown + MIT/public buttons.
+			//
+			// Update 2 — once YouTube premiere schedule is known:
+			//   Set firstLectureDate to the first premiere (weekly lectures follow automatically).
+			//   → Shows premiere countdown + subscribe button.
+			//
+			// Between updates 1 and 2 (in-person course running, no premieres yet):
+			//   firstLectureDate stays null → no countdown, MIT/public buttons only.
+			//
+			// After the last premiere: mailing list signup only (same URL as Everyone, relabeled; no MIT button).
+			//
+			// Test phases with ?date=YYYY-MM-DD in the URL.
       var registrationDate = new Date("January 05, 2026 13:00:00 GMT-05:00").getTime();
+			var firstLectureDate = new Date("March 30, 2026 10:00:00 GMT-04:00").getTime(); // null until premiere schedule is known
+			var numLectures = 9;
 			var registrationHeader = "";
 			var registrationMIT = '<a class="btn-solid-reg page-scroll" href="https://student.mit.edu/cgi-bin/sfprwtrm.sh"><h4><i class="fas fa-graduation-cap"></i><emsp> Current MIT</h4>MIT Students only</a> &nbsp';  // https://studentformsandpetitions.mit.edu/sfp/student/myForms.htm  //https://student.mit.edu/cgi-bin/sfprwtrm.sh
+			// Same signup URL — labeled "Everyone" during registration, "Mailing list" after all premieres.
 			var registrationPublic = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> Everyone</h4>All: Public and MIT students</a> &nbsp';
+			var mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
 
 			function DeltaDateToString(deltaDate) {
+				if (deltaDate <= 0) return "";
 				// Time calculations for days, hours, minutes and seconds
 				var days = Math.floor(deltaDate / (1000 * 60 * 60 * 24));
 				var hours = Math.floor((deltaDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -163,25 +183,31 @@
         var registrationDistance = registrationDate - now;
 
         var registrationCounter = "";
-				var publishCountdown = true; // false
-				if (publishCountdown) {
-					var firstLectureDate = new Date("March 30, 2026 10:00:00 GMT-04:00").getTime();
-					var numLectures = 9;
-					let nextLectureDate = new Date(firstLectureDate.valueOf())
 
+				var showPremiere = false;
+				var nextLectureDate;
+				if (firstLectureDate) {
+					nextLectureDate = new Date(firstLectureDate);
 					var lectureNumber = 1;
 					while ((nextLectureDate < now) && (lectureNumber < numLectures)) {
 						nextLectureDate.setTime(nextLectureDate.getTime() + (7 * 24 * 60 * 60 * 1000));
 						lectureNumber += 1;
-						// alert("lecture: "+lectureNumber+" in "+DeltaDateToString(nextLectureDate-now));
 					}
+					showPremiere = (nextLectureDate > now);
+				}
 
-					// alert("done");
+				if (registrationDistance > 0) {
+					  registrationCounter = "<h3>2026 lottery is now open! Signup today!</h3>"
+							+ "<h3><highlight>"
+							+ DeltaDateToString(registrationDistance)
+							+"</highlight></h3>";
+	        document.getElementById("registration").innerHTML = registrationCounter + registrationMIT + registrationPublic;
+
+				} else if (showPremiere) {
 					registrationCounter = "<h3><highlight>2026 Edition is HERE!</highlight></h3>"
 					       + "<h4>New Lecture Premiere: </h4><h3><highlight>"
                   + DeltaDateToString(nextLectureDate - now)
                   +"</highlight></h3>";
-
 
 					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
 					var lecButton = '<a class="btn-solid-reg" href="https://www.youtube.com/watch?v=II4giR4vOOo&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI" target="_blank" rel="noopener noreferrer"><h4><i class="fas fa-play"></i><emsp> Watch</h4><h6>lecture videos</h6></a>';
@@ -189,36 +215,13 @@
 					// document.getElementById("registration").innerHTML = registrationCounter + lecButton + "&emsp;" + subButton;
 					document.getElementById("registration").innerHTML = registrationCounter + "&emsp;" + subButton;
 
-
 				} else {
-
-					if (registrationDistance > 0) {
-
-
-					  // Display the result in the element with id="demo"
-					  registrationCounter = "<h3>2026 lottery is now open! Signup today!</h3>"
-							+ "<h3><highlight>"
-							+ DeltaDateToString(registrationDistance)
-							+"</highlight></h3>";
-					   registrationCounter
-
-					} else {
-					// If the count down is finished, write some text
 				    clearInterval(x);
-						// registrationCounter = "<h3><highlight>Registration is now open to all!!</highlight></h3>";
-						registrationCounter = ""; //"<h3>MIT IAP 2024 now live!</h3>"
-						registrationHeader = "<h4>Register and signup here!</h4>";
-						mailingList = '<h4>Everyone: signup for the mailing list for class updates</h4><a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-envelope"></i><emsp> Mailing list</h4>Sign up!</a> &nbsp';
-            // registrationCounter = "<h3>Course lectures are now LIVE!</h3>"
-            // 	+ '<br><a class="btn-solid-reg page-scroll" href="#schedule"><i class="fas fa-graduation-cap"></i><emsp> SCHEDULE</a> &nbsp';
-				  }
-					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><i class="fas fa-envelope"></i><emsp> JOIN MAILING LIST</a>';
-					// var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="https://www.youtube.com/channel/UCtslD4DGH6PKyG_1gFAX7sg?sub_confirmation=1"><h4><i class="fas fa-globe-americas"></i><emsp> Subscribe for<br>Updates</h4></a>';
-					var mailingListBtn = '<a class="btn-solid-reg page-scroll" href="http://eepurl.com/gQJo2D"><h4><i class="fas fa-globe-americas"></i><emsp> ONLINE<br>REGISTRATION</h4></a>';
-					var piazzaBtn = '<a class="btn-solid-reg page-scroll" href="https://piazza.com/mit/spring2026/6s191/home"><h4><i class="fas fa-globe-americas"></i><emsp><br>PIAZZA!</h4></a>';
-	        document.getElementById("registration").innerHTML = registrationCounter + registrationMIT + registrationPublic;
-					// document.getElementById("registration").innerHTML = registrationCounter + mailingListBtn;
-					// document.getElementById("registration").innerHTML = "<h3>2024 Program has started!</h3>";
+					if (firstLectureDate) {
+						document.getElementById("registration").innerHTML = mailingList;
+					} else {
+						document.getElementById("registration").innerHTML = registrationMIT + registrationPublic;
+					}
 				}
 
 			}, 1000);
